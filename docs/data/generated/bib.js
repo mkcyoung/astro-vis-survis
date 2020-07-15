@@ -115,7 +115,7 @@
     },
     "BoussejraUchikiTakeshima2019": {
         "abstract": "\"This paper describes an extendable graphical framework, aflak, which provides a visualization and provenance management environment for the analysis of multi-spectral astronomical datasets. Via its node editor interface, aflak allows the astronomer to compose transforms on input datasets queryable from public astronomical data repositories, then to export the results of the analysis as Flexible Image Transport System (FITS) files, in a manner such that the full provenance of the output data be preserved and reviewable, and that the exported file be usable by other common astronomical analysis software. FITS is the standard of data interchange in astronomy. By embedding aflak\u2019s provenance data into FITS files, we both achieve interoperability with existing software and full reproducibility of the process by which astronomers make discoveries.\"",
-        "author": "Malik Olivier Boussejra and Rikuo Uchiki and Yuriko Takeshima and Kazuya Matsubayashi and Shunya Takekawa and Makoto Uemura and Issei Fujishiro,",
+        "author": "Malik Olivier Boussejra and Rikuo Uchiki and Yuriko Takeshima and Kazuya Matsubayashi and Shunya Takekawa and Makoto Uemura and Issei Fujishiro",
         "doi": "10.1016/j.visinf.2019.03.001",
         "issn": "\"2468-502X\",",
         "journal": "\"Visual Informatics\",",
@@ -132,7 +132,7 @@
     },
     "BreddelsVeljanoski2018": {
         "abstract": "We present a new Python library, called vaex, intended to handle extremely large tabular datasets such as astronomical catalogues like the Gaia catalogue, N-body simulations, or other datasets which can be structured in rows and columns. Fast computations of statistics on regular N-dimensional grids allows analysis and visualization in the order of a billion rows per second, for a high-end desktop computer. We use streaming algorithms, memory mapped files, and a zero memory copy policy to allow exploration of datasets larger than memory, for example out-of-core algorithms. Vaex allows arbitrary (mathematical) transformations using normal Python expressions and (a subset of) numpy functions which are \u201clazily\u201d evaluated and computed when needed in small chunks, which avoids wasting of memory. Boolean expressions (which are also lazily evaluated) can be used to explore subsets of the data, which we call selections. Vaex uses a similar DataFrame API as Pandas, a very popular library, which helps migration from Pandas. Visualization is one of the key points of vaex, and is done using binned statistics in 1d (e.g. histogram), in 2d (e.g. 2d histograms with colourmapping) and 3d (using volume rendering). Vaex is split in in several packages: vaex-core for the computational part, vaex-viz for visualization mostly based on matplotlib, vaex-jupyter for visualization in the Jupyter notebook/lab based in IPyWidgets, vaex-server for the (optional) client-server communication, vaex-ui for the Qt based interface, vaex-hdf5 for HDF5 based memory mapped storage, vaex-astro for astronomy related selections, transformations, and memory mapped (column based) FITS storage.",
-        "author": "Breddels, Maarten A. and Veljanoski, Jovan",
+        "author": "Maarten A. Breddels and Jovan Veljanoski",
         "date-modified": "2020-07-02 22:30:25 -0600",
         "doi": "10.1051/0004-6361/201732493",
         "issn": "1432-0746",
@@ -423,7 +423,7 @@
     },
     "SagristaJordanMuller2019": {
         "abstract": "In this paper, we present Gaia Sky, a free and open-source multiplatform 3D Universe system, developed since 2014 in the Data Processing and Analysis Consortium framework of ESA's Gaia mission. Gaia's data release 2 represents the largest catalog of the stars of our Galaxy, comprising 1.3 billion star positions, with parallaxes, proper motions, magnitudes, and colors. In this mission, Gaia Sky is the central tool for off-the-shelf visualization of these data, and for aiding production of outreach material. With its capabilities to effectively handle these data, to enable seamless navigation along the high dynamic range of distances, and at the same time to provide advanced visualization techniques including relativistic aberration and gravitational wave effects, currently no actively maintained cross-platform, modern, and open alternative exists.",
-        "author": "A. Sagrist{\\`a} and S. Jordan and T. M{\\\"u}ller and F. Sadlo",
+        "author": "Antoni Sagrist\u00e0 and Stefan Jordan and Thomas M\u00fcller and Filip Sadlo",
         "doi": "10.1109/TVCG.2018.2864508",
         "journal": "IEEE Transactions on Visualization and Computer Graphics",
         "keywords": "type: global/local vis",
@@ -451,7 +451,7 @@
     },
     "ShanXieLi2014": {
         "abstract": "Halo is one of the most important basic elements in cosmology simulation, which merges from small clumps to ever larger objects. The processes of halos\u2019 birth and merging play a fundamental role in studying the evolution of large-scale cosmological structure. In this paper, a visual analysis system is developed to interactively identify and explore the evolution histories of thousands of halos. In this system, an intelligent structure-aware selection method in What You See Is What You Get manner is designed to efficiently define user\u2019s interesting region in 3D space with 2D hand-drawn lasso input. Then the exact information of halos within this 3D region is identified by data mining in the merger tree files. To avoid visual clutter, all the halos are projected in 2D space with MDS method. Through the linked view of 3D view and 2D graph, users can interactively explore these halos, including the tracing path and the evolution history tree.",
-        "author": "Shan, Guihua and Xie, Maojin and Li, Feng'An and Gao, Yang and Chi, Xuebin",
+        "author": "Guihua Shan and Maojin Xie and Feng\u2019An Li and Yang Gao and Xuebin Chi",
         "doi": "10.1007/s12650-014-0206-5",
         "issn": "1875-8975",
         "journal": "Journal of Visualization",
