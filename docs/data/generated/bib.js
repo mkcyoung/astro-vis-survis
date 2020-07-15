@@ -16,7 +16,7 @@
         "abstract": "Astronomy has been an inherently visual area of science for millenia, yet a majority of its significant discoveries take place in wavelengths beyond human vision. There are many people, including those with low or no vision, who cannot participate fully in such discoveries if visual media is the primary communication mechanism. Numerous efforts have worked to address equity of accessibility to such knowledge sharing, such as through the creation of three-dimensional (3D) printed data sets. This paper describes progress made through technological and programmatic developments in tactile 3D models using NASA's Chandra X-ray Observatory to improve access to data.",
         "author": "Kimberly Kowal Arcand and April Jubett and Megan Watzke and Sara Price and Kelly Williamson and Peter Edmonds",
         "date-modified": "2020-07-02 22:33:14 -0600",
-        "doi": "10.22323/2.18040201 10.22323/2.18040201",
+        "doi": "10.22323/2.18040201",
         "journal": "Journal of Science Communication",
         "keywords": "type: feature detection",
         "series": "JCOM",
@@ -26,7 +26,7 @@
     },
     "ArgudoFernandezPuertasRuiz2017": {
         "abstract": "New tools are needed to handle the growth of data in astrophysics delivered by recent and upcoming surveys. We aim to build open-source, light, flexible, and interactive software designed to visualize extensive three-dimensional (3D) tabular data. Entirely written in the Python language, we have developed interactive tools to browse and visualize the positions of galaxies in the universe and their positions with respect to its large-scale structures (LSS). Motivated by a previous study, we created two codes using Mollweide projection and wedge diagram visualizations, where survey galaxies can be overplotted on the LSS of the universe. These are interactive representations where the visualizations can be controlled by widgets. We have released these open-source codes that have been designed to be easily re-used and customized by the scientific community to fulfill their needs. The codes are adaptable to other kinds of 3D tabular data and are robust enough to handle several millions of objects.",
-        "author": "M. Argudo-Fern{\\'{a}}ndez and S. Duarte Puertas and J. E. Ruiz and J. Sabater and S. Verley and G. Bergond",
+        "author": "M. Argudo-Fern\u00e1ndez and S. Duarte Puertas and J. E. Ruiz and J. Sabater and S. Verley and G. Bergond",
         "doi": "10.1088/1538-3873/aa5785",
         "journal": "Publications of the Astronomical Society of the Pacific",
         "keywords": "type: global/local vis",
@@ -56,7 +56,7 @@
     },
     "BainesGiordanoRacero2016": {
         "abstract": "ESASky is a science-driven discovery portal to explore the multi-wavelength sky and visualize and access multiple astronomical archive holdings. The tool is a web application that requires no prior knowledge of any of the missions involved and gives users world-wide simplified access to the highest-level science data products from multiple astronomical space-based astronomy missions plus a number of ESA source catalogs. The first public release of ESASky features interfaces for the visualization of the sky in multiple wavelengths, the visualization of query results summaries, and the visualization of observations and catalog sources for single and multiple targets. This paper describes these features within ESASky, developed to address use cases from the scientific community. The decisions regarding the visualization of large amounts of data and the technologies used were made to maximize the responsiveness of the application and to keep the tool as useful and intuitive as possible.",
-        "author": "Deborah Baines and Fabrizio Giordano and Elena Racero and Jes{\\'{u}}s Salgado and Bel{\\'{e}}n L{\\'{o}}pez Mart{\\'{\\i}} and Bruno Mer{\\'{\\i}}n and Mar{\\'{\\i}}a-Henar Sarmiento and Ra{\\'{u}}l Guti{\\'{e}}rrez and I{\\~{n}}aki Ortiz de Landaluce and Ignacio Le{\\'{o}}n and Pilar de Teodoro and Juan Gonz{\\'{a}}lez and Sara Nieto and Juan Carlos Segovia and Andy Pollock and Michael Rosa and Christophe Arviset and Daniel Lennon and William O'Mullane and Guido de Marchi",
+        "author": "Deborah Baines amd Fabrizio Giordano and Elena Racero and Jes\u00fas Salgado and Bel\u00e9n L\u00f3pez Mart\u00ed and Bruno Mer\u00edn and Mar\u00eda-Henar Sarmiento and Ra\u00fal Guti\u00e9rrez and I\u00f1aki Ortiz de Landaluce and Ignacio Le\u00f3n",
         "doi": "10.1088/1538-3873/129/972/028001",
         "journal": "Publications of the Astronomical Society of the Pacific",
         "keywords": "type: global/local vis",
@@ -72,7 +72,7 @@
     },
     "BerrimanGood2017": {
         "abstract": "The Montage Image Mosaic Engine was designed as a scalable toolkit, written in C for performance and portability across *nix platforms, that assembles FITS images into mosaics. This code is freely available and has been widely used in the astronomy and IT communities for research, product generation, and for developing next-generation cyber-infrastructure. Recently, it has begun finding applicability in the field of visualization. This development has come about because the toolkit design allows easy integration into scalable systems that process data for subsequent visualization in a browser or client. The toolkit it includes a visualization tool suitable for automation and for integration into Python: mViewer creates, with a single command, complex multi-color images overlaid with coordinate displays, labels, and observation footprints, and includes an adaptive image histogram equalization method that preserves the structure of a stretched image over its dynamic range. The Montage toolkit contains functionality originally developed to support the creation and management of mosaics, but which also offers value to visualization: a background rectification algorithm that reveals the faint structure in an image; and tools for creating cutout and downsampled versions of large images. Version 5 of Montage offers support for visualizing data written in HEALPix sky-tessellation scheme, and functionality for processing and organizing images to comply with the TOAST sky-tessellation scheme required for consumption by the World Wide Telescope (WWT). Four online tutorials allow readers to reproduce and extend all the visualizations presented in this paper.",
-        "author": "Berriman, G. Bruce and Good, J. C.",
+        "author": "G. Bruce Berriman and J. C. Good",
         "doi": "10.1088/1538-3873/aa5456",
         "issn": "1538-3873",
         "journal": "Publications of the Astronomical Society of the Pacific",
@@ -103,7 +103,7 @@
     },
     "BockPembrokeMays2015": {
         "abstract": "We propose a system to analyze and contextualize simulations of coronal mass ejections. As current simulation techniques require manual input, uncertainty is introduced into the simulation pipeline leading to inaccurate predictions that can be mitigated through ensemble simulations. We provide the space weather analyst with a multi-view system providing visualizations to: 1. compare ensemble members against ground truth measurements, 2. inspect time-dependent information derived from optical flow analysis of satellite images, and 3. combine satellite images with a volumetric rendering of the simulations. This three-tier workflow provides experts with tools to discover correlations between errors in predictions and simulation parameters, thus increasing knowledge about the evolution and propagation of coronal mass ejections that pose a danger to Earth and interplanetary travel.",
-        "author": "Alexander Bock and A. Pembroke and M. L. Mays and L. Rastaetter and T. Ropinski and A. Ynnerman",
+        "author": "Alexander Bock and A. Pembroke and M. L. Mays and L. Rastaetter and T. Ropinski and Anders Ynnerman",
         "booktitle": "2015 IEEE Scientific Visualization Conference (SciVis)",
         "doi": "10.1109/SciVis.2015.7429487",
         "keywords": "type: multi-field vis",
@@ -115,8 +115,8 @@
     },
     "BoussejraUchikiTakeshima2019": {
         "abstract": "\"This paper describes an extendable graphical framework, aflak, which provides a visualization and provenance management environment for the analysis of multi-spectral astronomical datasets. Via its node editor interface, aflak allows the astronomer to compose transforms on input datasets queryable from public astronomical data repositories, then to export the results of the analysis as Flexible Image Transport System (FITS) files, in a manner such that the full provenance of the output data be preserved and reviewable, and that the exported file be usable by other common astronomical analysis software. FITS is the standard of data interchange in astronomy. By embedding aflak\u2019s provenance data into FITS files, we both achieve interoperability with existing software and full reproducibility of the process by which astronomers make discoveries.\"",
-        "author": "\"Malik Olivier Boussejra and Rikuo Uchiki and Yuriko Takeshima and Kazuya Matsubayashi and Shunya Takekawa and Makoto Uemura and Issei Fujishiro\",",
-        "doi": "\"https://doi.org/10.1016/j.visinf.2019.03.001\",",
+        "author": "Malik Olivier Boussejra and Rikuo Uchiki and Yuriko Takeshima and Kazuya Matsubayashi and Shunya Takekawa and Makoto Uemura and Issei Fujishiro,",
+        "doi": "10.1016/j.visinf.2019.03.001",
         "issn": "\"2468-502X\",",
         "journal": "\"Visual Informatics\",",
         "keywords": "type: unsure",
@@ -124,11 +124,11 @@
         "number": "\"1\",",
         "pages": "\"1 - 8\",",
         "series": "Visual Informatics",
-        "title": "\"aflak: Visual programming environment enabling end-to-end provenance management for the analysis of astronomical datasets\",",
+        "title": "aflak: Visual programming environment enabling end-to-end provenance management for the analysis of astronomical datasets,",
         "type": "article",
         "url": "\"http://www.sciencedirect.com/science/article/pii/S2468502X19300154\",",
         "volume": "\"3\",",
-        "year": "\"2019\","
+        "year": "2019,"
     },
     "BreddelsVeljanoski2018": {
         "abstract": "We present a new Python library, called vaex, intended to handle extremely large tabular datasets such as astronomical catalogues like the Gaia catalogue, N-body simulations, or other datasets which can be structured in rows and columns. Fast computations of statistics on regular N-dimensional grids allows analysis and visualization in the order of a billion rows per second, for a high-end desktop computer. We use streaming algorithms, memory mapped files, and a zero memory copy policy to allow exploration of datasets larger than memory, for example out-of-core algorithms. Vaex allows arbitrary (mathematical) transformations using normal Python expressions and (a subset of) numpy functions which are \u201clazily\u201d evaluated and computed when needed in small chunks, which avoids wasting of memory. Boolean expressions (which are also lazily evaluated) can be used to explore subsets of the data, which we call selections. Vaex uses a similar DataFrame API as Pandas, a very popular library, which helps migration from Pandas. Visualization is one of the key points of vaex, and is done using binned statistics in 1d (e.g. histogram), in 2d (e.g. 2d histograms with colourmapping) and 3d (using volume rendering). Vaex is split in in several packages: vaex-core for the computational part, vaex-viz for visualization mostly based on matplotlib, vaex-jupyter for visualization in the Jupyter notebook/lab based in IPyWidgets, vaex-server for the (optional) client-server communication, vaex-ui for the Qt based interface, vaex-hdf5 for HDF5 based memory mapped storage, vaex-astro for astronomy related selections, transformations, and memory mapped (column based) FITS storage.",
@@ -147,24 +147,10 @@
         "volume": "618",
         "year": "2018"
     },
-    "BurchettAbramovOtto2019": {
-        "abstract": "Abstract We introduce IGM-Vis, a novel astrophysics visualization and data analysis application for investigating galaxies and the gas that surrounds them in context with their larger scale environment, the Cosmic Web. Environment is an important factor in the evolution of galaxies from actively forming stars to quiescent states with little, if any, discernible star formation activity. The gaseous halos of galaxies (the circumgalactic medium, or CGM) play a critical role in their evolution, because the gas necessary to fuel star formation and any gas expelled from widely observed galactic winds must encounter this interface region between galaxies and the intergalactic medium (IGM). We present a taxonomy of tasks typically employed in IGM/CGM studies informed by a survey of astrophysicists at various career levels, and demonstrate how these tasks are facilitated via the use of our visualization software. Finally, we evaluate the effectiveness of IGM-Vis through two in-depth use cases that depict real-world analysis sessions that use IGM/CGM data.",
-        "author": "Burchett, J.N. and Abramov, D. and Otto, J. and Artanegara, C. and Prochaska, J.X. and Forbes, A.G.",
-        "doi": "10.1111/cgf.13705",
-        "journal": "Computer Graphics Forum",
-        "keywords": "type: multi-field vis",
-        "number": "3",
-        "pages": "491-504",
-        "series": "CGF",
-        "title": "IGM-Vis: Analyzing Intergalactic and Circumgalactic Medium Absorption Using Quasar Sightlines in a Cosmic Web Context",
-        "type": "article",
-        "volume": "38",
-        "year": "2019"
-    },
-    "Burchett_2020": {
+    "Burchett2020": {
         "abstract": "Modern cosmology predicts that matter in our universe today has assembled into a vast network of filamentary structures colloquially termed the \u201ccosmic web.\u201d Because this matter is either electromagnetically invisible (i.e., dark) or too diffuse to image in emission, tests of this cosmic web paradigm are limited. Wide-field surveys do reveal web-like structures in the galaxy distribution, but these luminous galaxies represent less than 10% of baryonic matter. Statistics of absorption by the intergalactic medium (IGM) via spectroscopy of distant quasars support the model yet have not conclusively tied the diffuse IGM to the web. Here, we report on a new method inspired by the Physarum polycephalum slime mold that is able to infer the density field of the cosmic web from galaxy surveys. Applying our technique to galaxy and absorption-line surveys of the local universe, we demonstrate that the bulk of the IGM indeed resides in the cosmic web. From the outskirts of cosmic web filaments, at approximately the cosmic mean matter density (\u03c1 m ) and \u223c5 virial radii from nearby galaxies, we detect an increasing H i absorption signature toward higher densities and the circumgalactic medium, to \u223c200\u03c1 m . However, the absorption is suppressed within the densest environments, suggesting shock-heating and ionization deep within filaments and/or feedback processes within galaxies.",
         "author": "Joseph N. Burchett and Oskar Elek and Nicolas Tejos and J. Xavier Prochaska and Todd M. Tripp and Rongmon Bordoloi and Angus G. Forbes",
-        "doi": "10.3847/2041-8213/ab700c 10.3847/2041-8213/ab700c",
+        "doi": "10.3847/2041-8213/ab700c",
         "journal": "The Astrophysical Journal",
         "keywords": "type: unsure",
         "month": "mar",
@@ -177,6 +163,20 @@
         "url": "https://doi.org/10.3847%2F2041-8213%2Fab700c",
         "volume": "891",
         "year": "2020,"
+    },
+    "BurchettAbramovOtto2019": {
+        "abstract": "Abstract We introduce IGM-Vis, a novel astrophysics visualization and data analysis application for investigating galaxies and the gas that surrounds them in context with their larger scale environment, the Cosmic Web. Environment is an important factor in the evolution of galaxies from actively forming stars to quiescent states with little, if any, discernible star formation activity. The gaseous halos of galaxies (the circumgalactic medium, or CGM) play a critical role in their evolution, because the gas necessary to fuel star formation and any gas expelled from widely observed galactic winds must encounter this interface region between galaxies and the intergalactic medium (IGM). We present a taxonomy of tasks typically employed in IGM/CGM studies informed by a survey of astrophysicists at various career levels, and demonstrate how these tasks are facilitated via the use of our visualization software. Finally, we evaluate the effectiveness of IGM-Vis through two in-depth use cases that depict real-world analysis sessions that use IGM/CGM data.",
+        "author": "Joseph N. Burchett and David Abramov and Jasmine Otto and Cassia Artanegara and J. Xavier Prochaska and Angus G. Forbes",
+        "doi": "10.1111/cgf.13705",
+        "journal": "Computer Graphics Forum",
+        "keywords": "type: multi-field vis",
+        "number": "3",
+        "pages": "491-504",
+        "series": "CGF",
+        "title": "IGM-Vis: Analyzing Intergalactic and Circumgalactic Medium Absorption Using Quasar Sightlines in a Cosmic Web Context",
+        "type": "article",
+        "volume": "38",
+        "year": "2019"
     },
     "DiemerFacio2017": {
         "abstract": "We introduce The Fabric of the Universe, an art and science collaboration focused on exploring the cosmic web of dark matter with unconventional techniques and materials. We discuss two of our projects in detail. First, we describe a pipeline for translating three-dimensional (3D) density structures from N-body simulations into solid surfaces suitable for 3D printing, and present prints of a cosmological volume and of the infall region around a massive cluster halo. In these models, we discover wall-like features that are invisible in two-dimensional projections. Going beyond the sheer visualization of simulation data, we undertake an exploration of the cosmic web as a three-dimensional woven textile. To this end, we develop experimental 3D weaving techniques to create sphere-like and filamentary shapes and radically simplify a region of the cosmic web into a set of filaments and halos. We translate the resulting tree structure into a series of commands that can be executed by a digital weaving machine, and present a large-scale textile installation.",
@@ -240,7 +240,7 @@
     },
     "GrosschedlAlvesMeingast2018": {
         "abstract": "We use the Gaia DR2 distances of about 700 mid-infrared selected young stellar objects in the benchmark giant molecular cloud Orion A to infer its 3D shape and orientation. We find that Orion A is not the fairly straight filamentary cloud that we see in (2D) projection, but instead a cometary-like cloud oriented toward the Galactic plane, with two distinct components: a denser and enhanced star-forming (bent) Head, and a lower density and star-formation quieter \u223c75 pc long Tail. The true extent of Orion A is not the projected \u223c40 pc but \u223c90 pc, making it by far the largest molecular cloud in the local neighborhood. Its aspect ratio (\u223c30:1) and high column-density fraction (\u223c45%) make it similar to large-scale Milky Way filaments (\u201cbones\u201d), despite its distance to the galactic mid-plane being an order of magnitude larger than typically found for these structures.",
-        "author": "Josefa E. Gro\u00dfschedl and Jo\u00e3o Alves and Stefan Meingast and Christine Ackerl and Joana Ascenso3 and Herv\u00e9 Bouy and Andreas Burkert and Jan Forbrich and Verena F\u00fcrnkranz and Alyssa A. Goodman and \u00c1lvaro Hacar and Gabor Herbst-Kiss and Charles J. Lada and Irati Larreina and Kieran Leschinski and Marco Lombardi and Andr\u00e9 Moitinho1 and Daniel Mortimer and Eleonora Zari",
+        "author": "Josefa E. Gro\u00dfschedl and Jo\u00e3o Alves and Stefan Meingast and Christine Ackerl and Joana Ascenso and Herv\u00e9 Bouy and Andreas Burkert and Jan Forbrich and Verena F\u00fcrnkranz and Alyssa A. Goodman and \u00c1lvaro Hacar and Gabor Herbst-Kiss and Charles J. Lada and Irati Larreina and Kieran Leschinski and Marco Lombardi and Andr\u00e9 Moitinho and Daniel Mortimer and Eleonora Zari",
         "date-modified": "2020-07-02 22:30:16 -0600",
         "doi": "10.1051/0004-6361/201833901",
         "journal": "Astronomy \\& Astrophysics",
@@ -345,6 +345,21 @@
         "volume": "129",
         "year": "2017"
     },
+    "Naiman2016": {
+        "abstract": "\"The rapid growth in scale and complexity of both computational and observational astrophysics over the past decade necessitates efficient and intuitive methods for examining and visualizing large datasets. Here, I present AstroBlend, an open-source Python library for use within the three dimensional modeling software, Blender. While Blender has been a popular open-source software among animators and visual effects artists, in recent years it has also become a tool for visualizing astrophysical datasets. AstroBlend combines the three dimensional capabilities of Blender with the analysis tools of the widely used astrophysical toolset, yt, to afford both computational and observational astrophysicists the ability to simultaneously analyze their data and create informative and appealing visualizations. The introduction of this package includes a description of features, work flow, and various example visualizations. A website \u2014 www.astroblend.com \u2014 has been developed which includes tutorials, and a gallery of example images and movies, along with links to downloadable data, three dimensional artistic models, and various other resources.\"",
+        "author": "J. P. Naiman",
+        "doi": "https://doi.org/10.1016/j.ascom.2016.02.002",
+        "issn": "\"2213-1337\",",
+        "journal": "\"Astronomy and Computing\",",
+        "keywords": "type: modeling & simulation",
+        "pages": "\"50 - 60\",",
+        "series": "Astronomy and Computing",
+        "title": "AstroBlend: An astrophysical visualization package for Blender,",
+        "type": "article",
+        "url": "http://www.sciencedirect.com/science/article/pii/S2213133716300117",
+        "volume": "\"15\",",
+        "year": "2016,"
+    },
     "NaimanBorkiewiczChristensen2017": {
         "abstract": "The rapid growth in scale and complexity of both computational and observational astrophysics over the past decade necessitates efficient and intuitive methods for examining and visualizing large data sets. Here, we discuss some newly developed tools used to import and manipulate astrophysical data into the three-dimensional visual effects software, Houdini. This software is widely used by visual effects artists, but a recently implemented Python API now allows astronomers to more easily use Houdini as a visualization tool. This paper includes a description of features, workflow, and various example visualizations. The project website, www.ytini.com, is aimed at a scientific audience and contains Houdini tutorials and links to the Python script Bitbucket repository to simplify the process of importing and rendering astrophysical data.",
         "author": "J. P. Naiman and Kalina Borkiewicz and A. J. Christensen",
@@ -379,7 +394,7 @@
     },
     "PomaredeCourtoisHoffman2017": {
         "abstract": "Cosmography, the study and making of maps of the universe or cosmos, is a field where visual representation benefits from modern three-dimensional visualization techniques and media. At the extragalactic distance scales, visualization is contributing to our understanding of the complex structure of the local universe in terms of spatial distribution and flows of galaxies and dark matter. In this paper, we report advances in the field of extragalactic cosmography obtained using the SDvision visualization software in the context of the Cosmicflows Project. Here, multiple visualization techniques are applied to a variety of data products: catalogs of galaxy positions and galaxy peculiar velocities, reconstructed velocity field, density field, gravitational potential field, velocity shear tensor viewed in terms of its eigenvalues and eigenvectors, envelope surfaces enclosing basins of attraction. These visualizations, implemented as high-resolution images, videos, and interactive viewers, have contributed to a number of studies: the cosmography of the local part of the universe, the nature of the Great Attractor, the discovery of the boundaries of our home supercluster of galaxies Laniakea, the mapping of the cosmic web, and the study of attractors and repellers.",
-        "author": "Pomar{\\`e}de, Daniel and Courtois, H{\\'e}l{\\`e}ne M. and Hoffman, Yehuda and Tully, R. Brent",
+        "author": "Daniel Pomar\u00e8de, H\u00e9l\u00e8ne M. Courtois, Yehuda Hoffman, and R. Brent Tully",
         "doi": "10.1088/1538-3873/aa5b73",
         "issn": "1538-3873",
         "journal": "Publications of the Astronomical Society of the Pacific",
@@ -422,7 +437,7 @@
     },
     "ScherzingerBrixDrees2017": {
         "abstract": "The winning entry of the 2015 IEEE Scientific Visualization Contest, this article describes a visualization tool for cosmological data resulting from dark-matter simulations. The proposed system helps users explore all aspects of the data at once and receive more detailed information about structures of interest at any time. Moreover, novel methods for visualizing and interactively exploring dark-matter halo substructures are proposed.",
-        "author": "A. {Scherzinger} and T. {Brix} and D. {Drees} and A. {V{\\\"o}lker} and K. {Radkov} and N. {Santalidis} and A. {Fieguth} and K. H. {Hinrichs}",
+        "author": "Aaron Scherzinger and Tobias Brix and Dominik Drees and Andreas V\u00f6lker and Kiril Radkov and Niko Santalidis and Alexander Fieguth and Klaus H. Hinrichs",
         "doi": "10.1109/MCG.2017.20",
         "journal": "IEEE Computer Graphics and Applications",
         "keywords": "type: multi-field vis",
@@ -527,7 +542,7 @@
     },
     "WengerLorenzMagnor2013": {
         "abstract": "Abstract Astronomical nebulae are among the most complex and visually appealing phenomena known outside the bounds of the Solar System. However, our fixed vantage point on Earth limits us to a single known view of these objects, and their intricate volumetric structure cannot be recovered directly. Recent approaches to reconstructing a volumetric 3D model use the approximate symmetry inherent to many nebulae, but require several hours of computation time on large multi-GPU clusters. We present a novel reconstruction algorithm based on group sparsity that reaches or even exceeds the quality of prior results while taking only a fraction of the time on a conventional desktop PC, thereby enabling end users in planetariums or educational facilities to produce high-quality content without expensive hardware or manual modeling. In principle, our approach can be generalized to other transparent phenomena with arbitrary types of user-specified symmetries.",
-        "author": "Wenger, Stephan and Lorenz, Dirk and Magnor, Marcus",
+        "author": "Stephan Wenger and Dirk Lorenz and Marcus Magnor",
         "doi": "10.1111/cgf.12216",
         "eprint": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/cgf.12216",
         "journal": "Computer Graphics Forum",
