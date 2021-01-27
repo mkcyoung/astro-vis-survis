@@ -2,7 +2,7 @@
  * Name as used as title for the main page
  * @type {string}
  */
-var title = 'Visualization in Astronomy';
+var title = 'Visualization in Astrophysics';
 
 /**
  * Relative path to the data directory
@@ -54,7 +54,7 @@ var editable = true;
  * @type {{html: string, id: string}}
  */
 var paper = {
-    html: 'Literature collection for <b><a href="http://www.visus.uni-stuttgart.de/uploads/tx_vispublications/eurovis14-star.pdf" target="_blank">Visualization in Astronomy: A Survey</a></b>',
+    html: 'Literature collection for <b><a href="http://www.visus.uni-stuttgart.de/uploads/tx_vispublications/eurovis14-star.pdf" target="_blank">Visualization in Astrophysics</a></b>',
     id: 'Beck2016Visual'
 };
 

@@ -1,7 +1,8 @@
 import os
 import json, codecs, time
 
-dataDir = "src/data/"
+# dataDir = "src/data/" #Changed this for github pages
+dataDir = "docs/data/"
 bibFile = "bib/references.bib"
 generatedDir = dataDir + "generated/"
 bibJsFile = generatedDir + "bib.js"
