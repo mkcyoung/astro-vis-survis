@@ -121,21 +121,20 @@ define(['jquery', 'jquery_layout', 'app/util', 'app/cluster', 'app/bib'],
                 class: 'toggle-container'
             }).appendTo(timelineContainerDiv);
 
-            // Adding in navigation tool
+            // Adding in navigation tool ============================================================
             var navContainerDiv = $('<div>', {
                 id: 'nav-container'
             }).appendTo(controlDiv);
             var navHeading = $('<h2><span class="symbol">/</span>Navigation Tool</h2>').appendTo(navContainerDiv);
             navHeading.click(function () {
                 util.toggleControl(navHeading);
-                // window.updateNav();
+                window.updateNav();
             });
             $('<div>', {
                 id: 'nav',
                 class: 'toggle-container'
             }).appendTo(navContainerDiv);
-
-
+            // end navigation tool ==================================================================
 
 
             $('<div>', {

@@ -383,7 +383,7 @@
         "author": "Madura, Thomas I.",
         "doi": "10.1088/1538-3873/129/975/058011",
         "issn": "1538-3873",
-        "keywords": "data analysis task:data accessibility, viz technique:interactive viz, viz technique:virtual reality",
+        "keywords": "data analysis task:data accessibility, viz technique:interactive vis, viz technique:virtual reality",
         "month": "Apr",
         "number": "975",
         "pages": "058011",

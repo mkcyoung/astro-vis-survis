@@ -29,6 +29,7 @@ define(function (require) {
         cluster.updateClusters();
         entryLayout.updateEntryList();
         timeline.updateTimeline();
+        nav.updateNav(); //Adding nav 
         if (scrollToTop) {
             $('#result_body').scrollTop(0);
         }
@@ -61,6 +62,17 @@ define(function (require) {
     window.updateTimelineLayout = function () {
         timeline.updateTimeline(true);
     };
+
+    // Adding navigation tool ============================================
+    window.updateNav = function () {
+        nav.updateNav();
+    };
+
+    // window.updateNavLayout = function () {
+    //     timeline.updateNav(true);
+    // };
+
+    //=====================================================================
 
     window.toggleSelector = function (type, text, event) {
         selectors.toggleSelector(type, text, event)

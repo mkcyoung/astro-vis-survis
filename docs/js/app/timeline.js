@@ -45,6 +45,7 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
             if (!skipDataUpdate) {
                 dataSelector = computeData();
             }
+            // console.log(bib)
             drawTimeline(displayHeight, timelineDiv, dataSelector);
             initCitationControls(timelineDiv);
         }
