@@ -8,6 +8,7 @@ define(function (require) {
     var selectors = require('app/selectors');
     var stats = require('app/stats');
     var timeline = require('app/timeline');
+    // var nav = require('app/nav');
     var tags = require('app/tags');
     var cluster = require('app/cluster');
     var entryLayout = require('app/entry_layout');
