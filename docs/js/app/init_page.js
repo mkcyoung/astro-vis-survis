@@ -46,6 +46,7 @@ define(['jquery', 'jquery_layout', 'app/util', 'app/cluster', 'app/bib'],
                 "selector.css",
                 "sparkline.css",
                 "timeline.css",
+                "nav.css", // Adding nav.css
                 "entries.css"
             ];
 
@@ -105,6 +106,8 @@ define(['jquery', 'jquery_layout', 'app/util', 'app/cluster', 'app/bib'],
 
         function initControl() {
             var controlDiv = $('#control');
+
+
             var timelineContainerDiv = $('<div>', {
                 id: 'timeline-container'
             }).appendTo(controlDiv);
@@ -117,6 +120,24 @@ define(['jquery', 'jquery_layout', 'app/util', 'app/cluster', 'app/bib'],
                 id: 'timeline',
                 class: 'toggle-container'
             }).appendTo(timelineContainerDiv);
+
+            // Adding in navigation tool
+            var navContainerDiv = $('<div>', {
+                id: 'nav-container'
+            }).appendTo(controlDiv);
+            var navHeading = $('<h2><span class="symbol">/</span>Navigation Tool</h2>').appendTo(navContainerDiv);
+            navHeading.click(function () {
+                util.toggleControl(navHeading);
+                // window.updateNav();
+            });
+            $('<div>', {
+                id: 'nav',
+                class: 'toggle-container'
+            }).appendTo(navContainerDiv);
+
+
+
+
             $('<div>', {
                 id: 'tag_clouds'
             }).appendTo(controlDiv);
