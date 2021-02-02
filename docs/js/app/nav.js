@@ -5,7 +5,10 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
     var d3references;
     var dataSelector;
 
-    var height = 100;
+    var height = 300;
+
+    // Nav tool chart margins
+    let margin = ({top: 20, right: 20, bottom: 30, left: 40})
 
     var computeYearRange = true;
 
@@ -297,31 +300,113 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
     }
 
     function drawNav(displayHeight, navDiv, dataSelector) {
-        if (citations) {
-            displayHeight = height + (drawSize * maxBlocks);
-            // console.log("full height " + displayHeight);
-            displayHeight = Math.max(displayHeight, 150);
-        }
+        // if (citations) {
+        //     displayHeight = height + (drawSize * maxBlocks);
+        //     // console.log("full height " + displayHeight);
+        //     displayHeight = Math.max(displayHeight, 150);
+        // }
+
+        let chart_height = displayHeight - margin.top - margin.bottom;
+        let chart_width = navDiv.width() - 3 - margin.left - margin.right;
 
         var chart = d3.select('#nav').append('svg')
-            .attr('class', 'chart')
-            .style('border', '1px solid black')
-            .attr('height', displayHeight + 'px');
-        var width = navDiv.width() - 3;
-        chart.attr('width', width + 'px');
-        var barWidth = width / (maxYear - minYear + 1);
-        var publicationHeight = height / (maxFrequency + 1);
-        var referenceHeight = (drawSize * maxFrequency) / (maxFrequency + 1);
+                .attr('class', 'chart')
+                .style('border', '1px solid black')
+                .attr('height', displayHeight + 'px')
+                .attr('width', navDiv.width() - 3 + 'px')
+            .append("g")
+                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-        drawBackground(barWidth, chart, displayHeight, publicationHeight, width);
-        drawFrequencyBars(chart, barWidth, publicationHeight);
-        drawSelectorFrequencyBars(barWidth, dataSelector, chart, publicationHeight);
-        if (citations) {
-            drawCitations(chart, barWidth, referenceHeight);
-        }
+        // Drawing axes for scatterplot
+        drawAxes(chart,chart_width,chart_height)
+        
 
-        generateTooltips(navDiv, barWidth);
+        // var barWidth = width / (maxYear - minYear + 1);
+        // var publicationHeight = height / (maxFrequency + 1);
+        // var referenceHeight = (drawSize * maxFrequency) / (maxFrequency + 1);
+
+        // drawBackground(barWidth, chart, displayHeight, publicationHeight, width);
+        // drawFrequencyBars(chart, barWidth, publicationHeight);
+        // drawSelectorFrequencyBars(barWidth, dataSelector, chart, publicationHeight);
+        // if (citations) {
+        //     drawCitations(chart, barWidth, referenceHeight);
+        // }
+        // generateTooltips(navDiv, barWidth);
     }
+
+    function drawAxes(chart,width,height){
+
+        
+        let x = d3.scale.linear()
+            .domain([-5,5])
+            // .domain(d3.extent(data, d => d.x)).nice()
+            .range([margin.left, width - margin.right])
+        let y = d3.scale.linear()
+            // .domain(d3.extent(data, d => d.y)).nice()
+            .domain([-5,5])
+            .range([height - margin.bottom, margin.top])
+
+        let xAxis = d3.svg.axis()
+            .scale(x)
+            .orient("bottom");
+
+        let yAxis = d3.svg.axis()
+            .scale(y)
+            .orient("left");
+
+        //drawing x axis
+        let xAxisG = chart.append("g")
+            .attr("class", "x axis")
+            .attr("transform", "translate(0," + height + ")")
+            .call(xAxis);
+        xAxisG
+            .append("text")
+                .attr("class", "label")
+                .attr("x", width)
+                .attr("y", -6)
+                .style("text-anchor", "end")
+                .text("General Purpose");
+        xAxisG
+            .append("text")
+            .attr("class", "label")
+            .attr("x", margin.left)
+            .attr("y", -6)
+            .style("text-anchor", "start")
+            .text("Single Task");
+
+
+        //drawing y axis
+        let yAxisG = chart.append("g")
+            .attr("class", "y axis")
+            .call(yAxis)
+        yAxisG
+            .append("text")
+            .attr("class", "label")
+            .attr("transform", "rotate(-90)")
+            .attr("y", 6)
+            .attr("dy", ".71em")
+            .style("text-anchor", "end")
+            .text("Application")
+        yAxisG
+            .append("text")
+            .attr("class", "label")
+            .attr("transform", "rotate(-90)")
+            .attr("x",-height+margin.bottom)
+            .attr("y", 6)
+            .attr("dy", ".71em")
+            .style("text-anchor", "start")
+            .text("Technique")
+        
+
+      //grid
+
+        
+
+
+
+    }
+
+    
 
     function drawBackground(barWidth, chart, displayHeight, publicationHeight, width) {
         var yearIntervalIndex = 0;
