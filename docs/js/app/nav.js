@@ -5,10 +5,10 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
     var d3references;
     var dataSelector;
 
-    var height = 300;
+    var height = 350;
 
     // Nav tool chart margins
-    let margin = ({top: 20, right: 20, bottom: 30, left: 40})
+    let margin = ({top: 10, right: 20, bottom: 10, left: 20})
 
     var computeYearRange = true;
 
@@ -357,7 +357,7 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
         //drawing x axis
         let xAxisG = chart.append("g")
             .attr("class", "x axis")
-            .attr("transform", "translate(0," + height + ")")
+            .attr("transform", "translate(0," + height/2 + ")")
             .call(xAxis);
         xAxisG
             .append("text")
@@ -378,6 +378,7 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
         //drawing y axis
         let yAxisG = chart.append("g")
             .attr("class", "y axis")
+            .attr("transform", "translate(" + width/2 + "," + 0 + ")")
             .call(yAxis)
         yAxisG
             .append("text")
