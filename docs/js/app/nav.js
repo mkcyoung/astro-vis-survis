@@ -5,10 +5,10 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
     var d3references;
     var dataSelector;
 
-    var height = 350;
+    var height = 375;
 
     // Nav tool chart margins
-    let margin = ({top: 10, right: 20, bottom: 10, left: 20})
+    let margin = ({top: 10, right: 15, bottom: 10, left: 15})
 
     var computeYearRange = true;
 

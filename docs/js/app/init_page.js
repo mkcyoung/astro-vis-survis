@@ -330,6 +330,9 @@ define(['jquery', 'jquery_layout', 'app/util', 'app/cluster', 'app/bib'],
                         if (window.updateTimelineLayout) {
                             window.updateTimelineLayout();
                         }
+                        if (window.updateNavLayout) {
+                            window.updateNavLayout();
+                        }
                     }
                 }
             });

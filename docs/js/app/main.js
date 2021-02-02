@@ -68,9 +68,9 @@ define(function (require) {
         nav.updateNav();
     };
 
-    // window.updateNavLayout = function () {
-    //     timeline.updateNav(true);
-    // };
+    window.updateNavLayout = function () {
+        nav.updateNav(true);
+    };
 
     //=====================================================================
 
