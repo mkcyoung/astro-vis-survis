@@ -11,7 +11,7 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
     let margin = ({top: 10, right: 15, bottom: 10, left: 15})
     
     // radius/padding for scatter
-    let radius = 6;
+    let radius = 5;
     let padding = 1;
 
     // color for scatter
@@ -468,6 +468,15 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
         });
         console.log(data)
 
+        //Force
+        var force = d3.layout.force()
+            .nodes(data)
+            .size([width, height])
+            .on("tick", tick)
+            .charge(-1)
+            .gravity(0)
+            .chargeDistance(20);
+
         // Add the dots
         var node = chart.selectAll(".dot")
             .data(data)
@@ -478,7 +487,57 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
             .attr("cy", function(d) { return d.y; })
             .style("fill", function(d) { return d.color; });
 
+        force.start();
+
+        function tick(e) {
+            node.each(moveTowardDataPosition(e.alpha));
+        
+            if (true) node.each(collide(e.alpha));
+        
+            node.attr("cx", function(d) { return d.x; })
+                .attr("cy", function(d) { return d.y; });
+        }
+
+
+        function moveTowardDataPosition(alpha) {
+            return function(d) {
+              d.x += (x(d['st-gp']) - d.x) * 0.1 * alpha;
+              d.y += (y(d['t-a']) - d.y) * 0.1 * alpha;
+            };
+        }
+
+
+        // Resolve collisions between nodes.
+        function collide(alpha) {
+            var quadtree = d3.geom.quadtree(data);
+            return function(d) {
+            var r = d.radius + radius + padding,
+                nx1 = d.x - r,
+                nx2 = d.x + r,
+                ny1 = d.y - r,
+                ny2 = d.y + r;
+            quadtree.visit(function(quad, x1, y1, x2, y2) {
+                if (quad.point && (quad.point !== d)) {
+                var x = d.x - quad.point.x,
+                    y = d.y - quad.point.y,
+                    l = Math.sqrt(x * x + y * y),
+                    r = d.radius + quad.point.radius + (d.color !== quad.point.color) * padding;
+                if (l < r) {
+                    l = (l - r) / l * alpha;
+                    d.x -= x *= l;
+                    d.y -= y *= l;
+                    quad.point.x += x;
+                    quad.point.y += y;
+                }
+                }
+                return x1 > nx2 || x2 < nx1 || y1 > ny2 || y2 < ny1;
+            });
+            };
+        }
+
     }
+
+    
 
     function drawScatterPoints(chart,width,height,data) {
 
