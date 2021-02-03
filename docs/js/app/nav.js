@@ -468,6 +468,8 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
         });
         console.log(data)
 
+        // Method from: http://bl.ocks.org/rpgove/10603627 
+
         //Force
         var force = d3.layout.force()
             .nodes(data)
@@ -485,11 +487,26 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
             .attr("r", radius)
             .attr("cx", function(d) { return d.x; })
             .attr("cy", function(d) { return d.y; })
-            .style("fill", function(d) { return d.color; });
+            .style("fill", function(d) { return d.color; })
+            .on("click", function(d){
+                // console.log(d)
+            })
+            .on("mouseover",function(d){
+                console.log(d)
+                d3.select(this)
+                    .attr("r",8)
 
+            })
+            .on("mouseout",function(d){
+                d3.select(this)
+                    .attr("r",radius)
+            });
+
+        // Start the force
         force.start();
 
         function tick(e) {
+            
             node.each(moveTowardDataPosition(e.alpha));
         
             if (true) node.each(collide(e.alpha));
@@ -497,7 +514,6 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
             node.attr("cx", function(d) { return d.x; })
                 .attr("cy", function(d) { return d.y; });
         }
-
 
         function moveTowardDataPosition(alpha) {
             return function(d) {

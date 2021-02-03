@@ -10,7 +10,12 @@
     stroke-opacity: .7;
     fill-opacity: .7;
   }
-  
+
+.dot:hover{
+    fill-opacity: 1;
+    stroke-opacity: 1;
+}
+
 /* .chart{
     font: 10px sans-serif;
 } */
