@@ -33,3 +33,8 @@
 .tooltipster-survis .vis {
     margin: 0px 20px;
 }
+
+.tooltipster-survis .dot {
+    font-size: 10pt;
+    font-weight: bold;
+}

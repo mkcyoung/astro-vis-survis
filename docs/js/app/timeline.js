@@ -540,6 +540,7 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
     }
 
     function generateTooltips(timelineDiv, barWidth) {
+        // console.log(timelineDiv.find('.tooltip'))
         timelineDiv.find('.tooltip').tooltipster({
             theme: 'tooltipster-survis',
             offsetX: (barWidth / 2) + 'px',

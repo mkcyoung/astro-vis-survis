@@ -93,7 +93,7 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
                 dataSelector = computeData();
             }
             drawNav(displayHeight, navDiv, dataSelector);
-            initCitationControls(navDiv);
+            // initCitationControls(navDiv);
         }
 
     };
@@ -371,9 +371,10 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
         d3.csv("data/nav_data.csv", function(navData){
             // console.log(navData)
 
-            // Drawing axes for scatterplot
+            // Drawing scatterlpot
             drawScatterPlot(chart,chart_width,chart_height,navData)
-            // drawScatterPoints(chart,chart_width,chart_height,data)
+            // var tooltipDiv = $('#nav');
+            generateTooltips(navDiv);
         })
 
         // drawScatterPoints(chart,chart_width,chart_height,navData)
@@ -388,7 +389,6 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
         // if (citations) {
         //     drawCitations(chart, barWidth, referenceHeight);
         // }
-        // generateTooltips(navDiv, barWidth);
     }
 
     function drawScatterPlot(chart,width,height,data){
@@ -466,7 +466,7 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
             d.color = color(d.label);
             d.radius = radius;
         });
-        console.log(data)
+        // console.log(data)
 
         // Method from: http://bl.ocks.org/rpgove/10603627 
 
@@ -483,11 +483,14 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
         var node = chart.selectAll(".dot")
             .data(data)
         .enter().append("circle")
-            .attr("class", "dot")
+            .attr("class", "dot tooltip")
             .attr("r", radius)
             .attr("cx", function(d) { return d.x; })
             .attr("cy", function(d) { return d.y; })
             .style("fill", function(d) { return d.color; })
+            .attr('title', function (d) {
+                return d.refs;
+            })
             .on("click", function(d){
                 // console.log(d)
             })
@@ -495,7 +498,6 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
                 console.log(d)
                 d3.select(this)
                     .attr("r",8)
-
             })
             .on("mouseout",function(d){
                 d3.select(this)
@@ -801,10 +803,10 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
         });
     }
 
-    function generateTooltips(timelineDiv, barWidth) {
-        timelineDiv.find('.tooltip').tooltipster({
+    function generateTooltips(navDiv) {
+        navDiv.find('.tooltip').tooltipster({
             theme: 'tooltipster-survis',
-            offsetX: (barWidth / 2) + 'px',
+            offsetX: '8px',
             offsetY: '-3px'
         });
     }
