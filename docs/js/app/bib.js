@@ -2,6 +2,7 @@ define(['jquery', 'bibtex_js', 'FileSaver', 'codemirror', 'app/util', 'data/gene
     function ($, bibtexJS, fileSaver, CodeMirror, util, generatedBib, availaiblePdf, availableImg, stopwords, tagCategories, authorizedTags) {
 
         var entries = readBibtex();
+
         if (!entries) {
             entries = generatedBib.entries;
         }

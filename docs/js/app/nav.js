@@ -9,9 +9,15 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
 
     // Nav tool chart margins
     let margin = ({top: 10, right: 15, bottom: 10, left: 15})
+    
+    // radius/padding for scatter
+    let radius = 6;
+    let padding = 1;
+
+    // color for scatter
+    let color = d3.scale.category10();
 
     var computeYearRange = true;
-
 
     var maxFrequency = 0;
     var maxReferenceCount = 0;
@@ -31,6 +37,44 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
 
     var minYear = 3000;
     var maxYear = 0;
+
+    // Nav data
+    //I'm just manually saving the csv into this folder so it's not fetching it asynchronously...
+    // There has to be a better way to do this, but I'm just sticking with this for lack of time
+    
+//     let navCsv = `papers,refs,st-gp,t-a,label
+// BarnesFlukeBourke2006,[BFBP06],2,2,wrangle
+// BarnesFluke2008,[BF08],-3,-3,wrangle
+// Kent2013,[Ken13],5,5,wrangle
+// Taylor2015,[Tay15],5,2,wrangle
+// Taylor2017,[Tay17b],-2,-4,wrangle
+// Naiman2016,[Nai16],5,4,wrangle
+// NaimanBorkiewiczChristensen2017,[NBC17],5,4,wrangle
+// Garate2017,[Gar17],-3,-4,wrangle
+// Kent2017,[Ken17],-3,-3.5,wrangle
+// BorkiewiczNaimanLai2019,[BNL19],-4,-4,wrangle
+// BerrimanGood2017,[BG17],5,4,wrangle
+// VogtOwenVerdesMontenegro2016,[VOVMB16],5,-4,wrangle
+// VogtSeitenzahlDopita2017,[VSDR17],-5,5,wrangle
+// RectorLevayFrattare2017,[RLF*17],,,wrangle
+// ComriePiriskaSimmonds2019,[CPST20],,,wrangle
+// MohammedPolysFarrah2020,[MPF20],,,wrangle
+// VogtWagner2011,[VW11],,,wrangle
+// AxelssonCostaSilva2017,[ACS*17],,,wrangle
+// ,[KHE*10],,,wrangle
+// ,[FH07],,,wrangle
+// ,,,,
+// ,,,,
+// ,,,,
+// ,,,,
+// ,[BSP*13],5,4.5,explore
+// ,[LCO*14],3,-4,explore
+// ,[BGR*16],4,4,explore
+// ,[AFPR*17],2,5,explore
+// ,[PCHT17],5,4,explore`
+    
+//     let navData = d3.csv.parse(navCsv)
+//     // console.log(navData)
 
     return {
 
@@ -317,9 +361,22 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
             .append("g")
                 .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-        // Drawing axes for scatterplot
-        drawAxes(chart,chart_width,chart_height)
         
+        
+        // Need to wrap drawing the scatterpot points into a call for the csv data.
+        // I think there's a much better way to do this but I'm at a loss right now.
+        // Would need to load this data whereever I'm loading the bibtext stuff. 
+        // I don't want to load this every single time..... must be better way. 
+        // Maybe I just save as JSON and then use in the same way I use the bib data....
+        d3.csv("data/nav_data.csv", function(navData){
+            // console.log(navData)
+
+            // Drawing axes for scatterplot
+            drawScatterPlot(chart,chart_width,chart_height,navData)
+            // drawScatterPoints(chart,chart_width,chart_height,data)
+        })
+
+        // drawScatterPoints(chart,chart_width,chart_height,navData)
 
         // var barWidth = width / (maxYear - minYear + 1);
         // var publicationHeight = height / (maxFrequency + 1);
@@ -334,7 +391,7 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
         // generateTooltips(navDiv, barWidth);
     }
 
-    function drawAxes(chart,width,height){
+    function drawScatterPlot(chart,width,height,data){
 
         
         let x = d3.scale.linear()
@@ -398,16 +455,62 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
             .style("text-anchor", "start")
             .text("Technique")
         
+        //grid
 
-      //grid
+        // Process the data / link it with bib data
+        // Set initial positions
+        data.forEach(function(d) {
+            // console.log(d)
+            d.x = x(d['st-gp']); //x axis
+            d.y = y(d['t-a']);
+            d.color = color(d.label);
+            d.radius = radius;
+        });
+        console.log(data)
+
+        // Add the dots
+        var node = chart.selectAll(".dot")
+            .data(data)
+        .enter().append("circle")
+            .attr("class", "dot")
+            .attr("r", radius)
+            .attr("cx", function(d) { return d.x; })
+            .attr("cy", function(d) { return d.y; })
+            .style("fill", function(d) { return d.color; });
+
+    }
+
+    function drawScatterPoints(chart,width,height,data) {
 
         
 
 
 
-    }
+        // chart.selectAll('svg').data(d3data).enter().append('rect')
+        //     .attr('class', 'bar total tooltip')
+        //     .style('fill', '#EEEEEE')
+        //     .style('stroke', 'black')
+        //     .attr('shape-rendering', 'crispEdges')
+        //     .attr('x', function (d) {
+        //         return (d.key - minYear) * barWidth;
+        //     })
+        //     .attr('y', function (d) {
 
-    
+        //         return height - publicationHeight * d.value;
+
+        //     })
+        //     .attr('width', barWidth)
+        //     .attr('height', function (d) {
+        //         return publicationHeight * d.value + 1;
+        //     })
+        //     .attr('title', function (d) {
+        //         return d.key + ': ' + d.value + ' publications';
+        //     })
+        //     .on('click', function (d) {
+        //         toggleSelector('year', d.key, d3.event);
+        //     });
+
+    }
 
     function drawBackground(barWidth, chart, displayHeight, publicationHeight, width) {
         var yearIntervalIndex = 0;

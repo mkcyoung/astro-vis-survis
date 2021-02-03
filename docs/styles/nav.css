@@ -5,6 +5,12 @@
   shape-rendering: crispEdges;
 }
 
+.dot {
+    stroke: #000;
+    stroke-opacity: .7;
+    fill-opacity: .7;
+  }
+  
 /* .chart{
     font: 10px sans-serif;
 } */
