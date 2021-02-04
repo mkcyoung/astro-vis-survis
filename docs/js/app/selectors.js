@@ -24,6 +24,7 @@ define(['jquery', 'app/util', 'app/bib'], function ($, util, bib) {
         updateSelectors: function () {
             $('.selector').remove();
             var selectors = this;
+            // console.log(selectors)
             var clearButton = $('#clear_selectors');
             for (var i = 0; i < this.nSelectors; i++) {
                 var selectorDiv = $('<div></div>', {
@@ -31,6 +32,7 @@ define(['jquery', 'app/util', 'app/bib'], function ($, util, bib) {
                     id: 'selector' + i
                 }).insertBefore(clearButton);
                 var selector = selectors.getSelectors()[i];
+                // console.log(selector)
                 if (selector) {
                     var invertedClass = (selector['inverted'] ? ' inverted' : '');
                     selectorDiv.addClass(invertedClass);
@@ -90,8 +92,11 @@ define(['jquery', 'app/util', 'app/bib'], function ($, util, bib) {
                 selectors.getSelectors()[i] = null;
                 window.updateShowPart();
             });
+            // console.log("in update selectors 1:",bib.sortedIDs)
             this.computeEntrySelectorSimilarities();
+            // console.log("in update selectors 2:",bib.sortedIDs)
             this.applyFilter();
+            // console.log("in update selectors 3:",bib.sortedIDs)
             util.generateTooltips($('#selectors_container').find('.selector'));
         },
 
@@ -163,6 +168,7 @@ define(['jquery', 'app/util', 'app/bib'], function ($, util, bib) {
             selector['inverted'] = false;
             selector['lock'] = event && event.ctrlKey;
             selector['count'] = 0;
+            console.log("in toggle selectors",bib.sortedIDs)
             window.updateShowPart();
         },
 
@@ -194,7 +200,9 @@ define(['jquery', 'app/util', 'app/bib'], function ($, util, bib) {
                             similarity = computeTagSimilarity(bib, id, text);
                         } else if (selector['type'] == 'year') {
                             similarity = computeYearSimilarity(entry, text);
-                        } else if (selector['type'] == 'author') {
+                        } else if (selector['type'] == 'nav') {
+                            similarity = computeNavSimilarity(entry,id, text);
+                        }else if (selector['type'] == 'author') {
                             similarity = computeAuthorSimilarity(entry, text);
                         } else if (selector['type'] == 'entity') {
                             if (!selector['tokenized_text']) {
@@ -397,6 +405,14 @@ define(['jquery', 'app/util', 'app/bib'], function ($, util, bib) {
 
     function computeYearSimilarity(entry, text) {
         if (entry["year"] == text) {
+            return 1.0;
+        }
+        return 0.0;
+    }
+
+    function computeNavSimilarity(entry, id, text) {
+        console.log("in compute nav sim",entry,id,text)
+        if (id == text) {
             return 1.0;
         }
         return 0.0;

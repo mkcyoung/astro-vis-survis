@@ -6,10 +6,12 @@ define(['jquery', 'jqueryui', 'codemirror', 'stex', 'app/util', 'app/selectors',
         return {
 
             updateEntryList: function () {
+                // console.log(bib.sortedIDs)
                 var nVisibleEntries = Math.min(bib.nVisibleEntries, Object.keys(bib.entries).length);
                 var resultBodyDiv = $('#result_body');
                 resultBodyDiv.find('.entry').hide();
                 var j = 0;
+                
                 $.each(bib.sortedIDs, function (i, id) {
                     if (bib.filteredEntries[id] && (j < nVisibleEntries)) {
                         var entryDiv = createEntryDiv(id);

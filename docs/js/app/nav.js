@@ -493,7 +493,7 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
             })
             .on("click", function(d){
                 console.log(d)
-                // toggleSelector('year', d.key, d3.event);
+                toggleSelector('nav', d.papers, d3.event);
             })
             .on("mouseover",function(d){
                 // console.log(d)
