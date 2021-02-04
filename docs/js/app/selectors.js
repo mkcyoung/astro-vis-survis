@@ -146,6 +146,7 @@ define(['jquery', 'app/util', 'app/bib'], function ($, util, bib) {
                 type = 'search';
             }
             for (var i = 0; i < this.nSelectors; i++) {
+                // console.log(this.selectors[i])
                 if (this.selectors[i] && this.selectors[i]['type'] == type && this.selectors[i]['text'] == text) {
                     this.selectors[i] = null;
                     window.updateShowPart();

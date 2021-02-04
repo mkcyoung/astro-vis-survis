@@ -492,10 +492,11 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
                 return d.refs;
             })
             .on("click", function(d){
-                // console.log(d)
+                console.log(d)
+                // toggleSelector('year', d.key, d3.event);
             })
             .on("mouseover",function(d){
-                console.log(d)
+                // console.log(d)
                 d3.select(this)
                     .attr("r",8)
             })
@@ -806,7 +807,7 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
     function generateTooltips(navDiv) {
         navDiv.find('.tooltip').tooltipster({
             theme: 'tooltipster-survis',
-            offsetX: '8px',
+            offsetX: radius*1.8 + 'px',
             offsetY: '-3px'
         });
     }

@@ -29,7 +29,9 @@ define(function (require) {
         cluster.updateClusters();
         entryLayout.updateEntryList();
         timeline.updateTimeline();
-        nav.updateNav(); //Adding nav 
+        //Adding nav -- this functions executes when selectors are clicked, commenting out for now
+        // b/c it doesn't need to update every single time.
+        // nav.updateNav();
         if (scrollToTop) {
             $('#result_body').scrollTop(0);
         }
