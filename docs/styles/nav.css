@@ -21,6 +21,11 @@
     stroke-opacity: 1;
 }
 
+#nav {
+    overflow: auto;
+    margin-bottom:10px;
+}
+
 /* .chart{
     font: 10px sans-serif;
 } */

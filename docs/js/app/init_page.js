@@ -108,19 +108,6 @@ define(['jquery', 'jquery_layout', 'app/util', 'app/cluster', 'app/bib'],
             var controlDiv = $('#control');
 
 
-            var timelineContainerDiv = $('<div>', {
-                id: 'timeline-container'
-            }).appendTo(controlDiv);
-            var timelineHeading = $('<h2><span class="symbol">/</span>Timeline</h2>').appendTo(timelineContainerDiv);
-            timelineHeading.click(function () {
-                util.toggleControl(timelineHeading);
-                window.updateTimeline();
-            });
-            $('<div>', {
-                id: 'timeline',
-                class: 'toggle-container'
-            }).appendTo(timelineContainerDiv);
-
             // Adding in navigation tool ============================================================
             var navContainerDiv = $('<div>', {
                 id: 'nav-container'
@@ -135,6 +122,20 @@ define(['jquery', 'jquery_layout', 'app/util', 'app/cluster', 'app/bib'],
                 class: 'toggle-container'
             }).appendTo(navContainerDiv);
             // end navigation tool ==================================================================
+
+
+            var timelineContainerDiv = $('<div>', {
+                id: 'timeline-container'
+            }).appendTo(controlDiv);
+            var timelineHeading = $('<h2><span class="symbol">/</span>Timeline</h2>').appendTo(timelineContainerDiv);
+            timelineHeading.click(function () {
+                util.toggleControl(timelineHeading);
+                window.updateTimeline();
+            });
+            $('<div>', {
+                id: 'timeline',
+                class: 'toggle-container'
+            }).appendTo(timelineContainerDiv);
 
 
             $('<div>', {

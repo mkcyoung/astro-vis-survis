@@ -438,6 +438,27 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
         
         //grid
 
+        //legend
+        // console.log("here")
+        // let legend = chart.selectAll(".legend")
+        //     .data(color.domain())
+        //     .enter().append("g")
+        //     .attr("class", "legend")
+        //     .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+        // legend.append("rect")
+        //     .attr("x", width - 18)
+        //     .attr("width", 18)
+        //     .attr("height", 18)
+        //     .style("fill", color);
+
+        // legend.append("text")
+        //     .attr("x", width - 24)
+        //     .attr("y", 9)
+        //     .attr("dy", ".35em")
+        //     .style("text-anchor", "end")
+        //     .text(function(d) { return d; });
+
         // Process the data / link it with bib data
         // Set initial positions
         data.forEach(function(d) {

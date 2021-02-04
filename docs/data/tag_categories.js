@@ -9,6 +9,9 @@ define({
 		"astronomy topic": {
 			"description": "Primary astronomical research topic addressed in the paper."
 		},
+		"data source": {
+			"description": "The source of the data considered in the paper."
+		}
 
 
 	}
