@@ -17,6 +17,9 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
     // color for scatter
     let color = d3.scale.category10();
 
+    // list with currently clicked scatterplot points
+    let clicked = []
+
     var computeYearRange = true;
 
     var maxFrequency = 0;
@@ -38,44 +41,7 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
     var minYear = 3000;
     var maxYear = 0;
 
-    // Nav data
-    //I'm just manually saving the csv into this folder so it's not fetching it asynchronously...
-    // There has to be a better way to do this, but I'm just sticking with this for lack of time
-    
-//     let navCsv = `papers,refs,st-gp,t-a,label
-// BarnesFlukeBourke2006,[BFBP06],2,2,wrangle
-// BarnesFluke2008,[BF08],-3,-3,wrangle
-// Kent2013,[Ken13],5,5,wrangle
-// Taylor2015,[Tay15],5,2,wrangle
-// Taylor2017,[Tay17b],-2,-4,wrangle
-// Naiman2016,[Nai16],5,4,wrangle
-// NaimanBorkiewiczChristensen2017,[NBC17],5,4,wrangle
-// Garate2017,[Gar17],-3,-4,wrangle
-// Kent2017,[Ken17],-3,-3.5,wrangle
-// BorkiewiczNaimanLai2019,[BNL19],-4,-4,wrangle
-// BerrimanGood2017,[BG17],5,4,wrangle
-// VogtOwenVerdesMontenegro2016,[VOVMB16],5,-4,wrangle
-// VogtSeitenzahlDopita2017,[VSDR17],-5,5,wrangle
-// RectorLevayFrattare2017,[RLF*17],,,wrangle
-// ComriePiriskaSimmonds2019,[CPST20],,,wrangle
-// MohammedPolysFarrah2020,[MPF20],,,wrangle
-// VogtWagner2011,[VW11],,,wrangle
-// AxelssonCostaSilva2017,[ACS*17],,,wrangle
-// ,[KHE*10],,,wrangle
-// ,[FH07],,,wrangle
-// ,,,,
-// ,,,,
-// ,,,,
-// ,,,,
-// ,[BSP*13],5,4.5,explore
-// ,[LCO*14],3,-4,explore
-// ,[BGR*16],4,4,explore
-// ,[AFPR*17],2,5,explore
-// ,[PCHT17],5,4,explore`
-    
-//     let navData = d3.csv.parse(navCsv)
-//     // console.log(navData)
-
+   
     return {
 
         updateNav: function (skipDataUpdate) {
@@ -483,8 +449,22 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
         var node = chart.selectAll(".dot")
             .data(data)
         .enter().append("circle")
-            .attr("class", "dot tooltip")
-            .attr("r", radius)
+            .attr("class", function(d) {
+                if(clicked.includes(d.papers)){
+                    return "dot tooltip clicked"
+                }
+                else{
+                    return "dot tooltip"
+                }
+            })
+            .attr("r", function(d) {
+                if(clicked.includes(d.papers)){
+                    return radius*1.75
+                }
+                else{
+                    return radius
+                }
+            })
             .attr("cx", function(d) { return d.x; })
             .attr("cy", function(d) { return d.y; })
             .style("fill", function(d) { return d.color; })
@@ -492,17 +472,43 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
                 return d.refs;
             })
             .on("click", function(d){
-                console.log(d)
+                // console.log(d)
+                // If dot has already been clicled
+                if (d3.select(this).classed("clicked")){
+                    // remove clicked class
+                    d3.select(this)
+                        .classed("clicked",false)
+                        .attr("r",radius)
+                    //remove from list
+                    let index = clicked.indexOf(d.papers);
+                    if (index > -1){
+                        clicked.splice(index,1)
+                    }
+                }
+                // if dot has yet to be clicked
+                else{
+                    // add clicked class
+                    d3.select(this)
+                        .classed("clicked",true)
+                        .attr("r",radius*1.75)
+                    // add to clicked list
+                    clicked.push(d.papers)
+                }
+
+                // Main selection function
                 toggleSelector('nav', d.papers, d3.event);
+                console.log("clicked array",clicked)
             })
             .on("mouseover",function(d){
                 // console.log(d)
                 d3.select(this)
-                    .attr("r",8)
+                    .attr("r",radius*1.75)
             })
             .on("mouseout",function(d){
-                d3.select(this)
-                    .attr("r",radius)
+                if (!d3.select(this).classed("clicked")){
+                    d3.select(this)
+                        .attr("r",radius)
+                }
             });
 
         // Start the force
@@ -558,37 +564,7 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
 
     
 
-    function drawScatterPoints(chart,width,height,data) {
-
-        
-
-
-
-        // chart.selectAll('svg').data(d3data).enter().append('rect')
-        //     .attr('class', 'bar total tooltip')
-        //     .style('fill', '#EEEEEE')
-        //     .style('stroke', 'black')
-        //     .attr('shape-rendering', 'crispEdges')
-        //     .attr('x', function (d) {
-        //         return (d.key - minYear) * barWidth;
-        //     })
-        //     .attr('y', function (d) {
-
-        //         return height - publicationHeight * d.value;
-
-        //     })
-        //     .attr('width', barWidth)
-        //     .attr('height', function (d) {
-        //         return publicationHeight * d.value + 1;
-        //     })
-        //     .attr('title', function (d) {
-        //         return d.key + ': ' + d.value + ' publications';
-        //     })
-        //     .on('click', function (d) {
-        //         toggleSelector('year', d.key, d3.event);
-        //     });
-
-    }
+   
 
     function drawBackground(barWidth, chart, displayHeight, publicationHeight, width) {
         var yearIntervalIndex = 0;

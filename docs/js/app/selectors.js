@@ -168,7 +168,7 @@ define(['jquery', 'app/util', 'app/bib'], function ($, util, bib) {
             selector['inverted'] = false;
             selector['lock'] = event && event.ctrlKey;
             selector['count'] = 0;
-            console.log("in toggle selectors",bib.sortedIDs)
+            // console.log("in toggle selectors",bib.sortedIDs)
             window.updateShowPart();
         },
 

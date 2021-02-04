@@ -21,12 +21,8 @@ define(function (require) {
 
 
     window.update = function (scrollToTop) {
-        // console.log("in update 1: ",bib.sortedIDs)
-        // console.log("in update 1: ",bib.filteredEntries)
         $('.tooltipstered').tooltipster('hide');
         selectors.updateSelectors();
-        // console.log("in update 2: ",bib.sortedIDs)
-        // console.log("in update 2: ",bib.filteredEntries)
         references.updateReferences();
         stats.updateStats();
         tags.updateTagClouds();
