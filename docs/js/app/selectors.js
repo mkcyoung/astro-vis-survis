@@ -91,6 +91,10 @@ define(['jquery', 'app/util', 'app/bib'], function ($, util, bib) {
                 var i = parseInt($(this).parent().parent().attr('id').substring(8));
                 selectors.getSelectors()[i] = null;
                 window.updateShowPart();
+                // returns the paper ID of what was clicked
+                paperID = $(this).parent()[0].innerText
+                // Removes it from clicked and redraws nav
+                window.updateNav(false,false,paperID);
             });
             // console.log("in update selectors 1:",bib.sortedIDs)
             this.computeEntrySelectorSimilarities();

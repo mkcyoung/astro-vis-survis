@@ -44,7 +44,10 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
    
     return {
 
-        updateNav: function (skipDataUpdate) {
+        // // list with currently clicked scatterplot points
+        // clicked : [],
+
+        updateNav: function (skipDataUpdate,resetClick,removeFromClick) {
             var displayHeight = height;
 
             var navDiv = $('#nav');
@@ -54,9 +57,21 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
             //     class: 'label',
             //     text: 'publications per year'
             // }).appendTo(navDiv);
+            
 
             if (!skipDataUpdate) {
                 dataSelector = computeData();
+            }
+
+            if (resetClick){
+                clicked = []
+            }
+            if (removeFromClick){
+                let index = clicked.indexOf(removeFromClick);
+                if (index > -1){
+                    clicked.splice(index,1)
+                }
+
             }
             drawNav(displayHeight, navDiv, dataSelector);
             // initCitationControls(navDiv);
@@ -497,7 +512,7 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
 
                 // Main selection function
                 toggleSelector('nav', d.papers, d3.event);
-                console.log("clicked array",clicked)
+                // console.log("clicked array",clicked)
             })
             .on("mouseover",function(d){
                 // console.log(d)

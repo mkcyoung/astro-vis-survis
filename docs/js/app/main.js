@@ -68,8 +68,8 @@ define(function (require) {
     };
 
     // Adding navigation tool ============================================
-    window.updateNav = function () {
-        nav.updateNav();
+    window.updateNav = function (x,y,z) {
+        nav.updateNav(x,y,z);
     };
 
     window.updateNavLayout = function () {
@@ -84,6 +84,10 @@ define(function (require) {
 
     window.resetSelectors = function () {
         selectors.selectors = {};
+        // Dealing with nav stuff =========================================
+        // console.log(clicked)
+        nav.updateNav(false,true,false);
+        // ================================================================
         window.updateShowPart();
     };
 
