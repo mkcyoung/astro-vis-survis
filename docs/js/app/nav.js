@@ -8,7 +8,7 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
     var height = 375;
 
     // Nav tool chart margins
-    let margin = ({top: 10, right: 15, bottom: 10, left: 15})
+    let margin = ({top: 10, right: 15, bottom: 20, left: 15})
     
     // radius/padding for scatter
     let radius = 5;
@@ -438,27 +438,6 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
         
         //grid
 
-        //legend
-        // console.log("here")
-        // let legend = chart.selectAll(".legend")
-        //     .data(color.domain())
-        //     .enter().append("g")
-        //     .attr("class", "legend")
-        //     .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
-
-        // legend.append("rect")
-        //     .attr("x", width - 18)
-        //     .attr("width", 18)
-        //     .attr("height", 18)
-        //     .style("fill", color);
-
-        // legend.append("text")
-        //     .attr("x", width - 24)
-        //     .attr("y", 9)
-        //     .attr("dy", ".35em")
-        //     .style("text-anchor", "end")
-        //     .text(function(d) { return d; });
-
         // Process the data / link it with bib data
         // Set initial positions
         data.forEach(function(d) {
@@ -595,6 +574,29 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
             });
             };
         }
+
+        //legend
+        console.log("here")
+        let legend = chart.selectAll(".legend")
+            .data(color.domain())
+            .enter().append("g")
+            .attr("class", "legend")
+            .attr("transform", function(d, i) { return "translate(" + i*100 + ","+ (height-5) + ")"; });
+
+        legend.append("rect")
+            .attr("x", width/4)
+            // .attr("x", width - 18)
+            .attr("width", 18)
+            .attr("height", 18)
+            .style("fill", color);
+
+        legend.append("text")
+            .attr("x", width/4 - 5)
+            // .attr("x", width - 24)
+            .attr("y", 9)
+            .attr("dy", ".35em")
+            .style("text-anchor", "end")
+            .text(function(d) { return d; });
 
     }
 

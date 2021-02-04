@@ -26,6 +26,17 @@
     margin-bottom:10px;
 }
 
+.legend{
+    stroke: #000;
+    stroke-opacity: .7;
+    fill-opacity: .7;
+}
+
+.legend text{
+    stroke-opacity: 0;
+    fill-opacity: 1;
+}
+
 /* .chart{
     font: 10px sans-serif;
 } */
