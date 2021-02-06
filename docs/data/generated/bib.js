@@ -95,7 +95,7 @@
     },
     "BerrimanGood2017": {
         "abstract": "The Montage Image Mosaic Engine was designed as a scalable toolkit, written in C for performance and portability across *nix platforms, that assembles FITS images into mosaics. This code is freely available and has been widely used in the astronomy and IT communities for research, product generation, and for developing next-generation cyber-infrastructure. Recently, it has begun finding applicability in the field of visualization. This development has come about because the toolkit design allows easy integration into scalable systems that process data for subsequent visualization in a browser or client. The toolkit it includes a visualization tool suitable for automation and for integration into Python: mViewer creates, with a single command, complex multi-color images overlaid with coordinate displays, labels, and observation footprints, and includes an adaptive image histogram equalization method that preserves the structure of a stretched image over its dynamic range. The Montage toolkit contains functionality originally developed to support the creation and management of mosaics, but which also offers value to visualization: a background rectification algorithm that reveals the faint structure in an image; and tools for creating cutout and downsampled versions of large images. Version 5 of Montage offers support for visualizing data written in HEALPix sky-tessellation scheme, and functionality for processing and organizing images to comply with the TOAST sky-tessellation scheme required for consumption by the World Wide Telescope (WWT). Four online tutorials allow readers to reproduce and extend all the visualizations presented in this paper.",
-        "author": "Berriman, G. Bruce and Good, J. C.",
+        "author": "G. Bruce Berriman and J. C. Good",
         "doi": "10.1088/1538-3873/aa5456",
         "issn": "1538-3873",
         "keywords": "data analysis task:data wrangling, viz technique:2D images, viz technique:dimensionality reduction, astronomy topic:extragalactic, astronomy topic:galactic, data source:simulations",
@@ -110,7 +110,7 @@
         "year": "2017"
     },
     "Bladin2017": {
-        "author": "Bladin, Karl and Axelsson, Emil and Broberg, Erik and Emmart, Carter and Ljung, Patric and Bock, Alexander and Ynnerman, Anders",
+        "author": "Karl Bladin and Emil Axelsson and Erik Broberg and Carter Emmart and Patric Ljung and Alexander Bock and Anders Ynnerman",
         "bdsk-url-1": "https://doi.org/10.1109/TVCG.2017.2743958",
         "doi": "10.1109/TVCG.2017.2743958",
         "issn": "1077-2626",
@@ -126,7 +126,7 @@
     },
     "BockAxelssonCosta2020": {
         "abstract": "Human knowledge about the cosmos is rapidly increasing as instruments and simulations are generating new data supporting the formation of theory and understanding of the vastness and complexity of the universe. OpenSpace is a software system that takes on the mission of providing an integrated view of all these sources of data and supports interactive exploration of the known universe from the millimeter scale showing instruments on spacecrafts to billions of light years when visualizing the early universe. The ambition is to support research in astronomy and space exploration, science communication at museums and in planetariums as well as bringing exploratory astrographics to the class room. There is a multitude of challenges that need to be met in reaching this goal such as the data variety, multiple spatio-temporal scales, collaboration capabilities, etc. Furthermore, the system has to be flexible and modular to enable rapid prototyping and inclusion of new research results or space mission data and thereby shorten the time from discovery to dissemination. To support the different use cases the system has to be hardware agnostic and support a range of platforms and interaction paradigms. In this paper we describe how OpenSpace meets these challenges in an open source effort that is paving the path for the next generation of interactive astrographics.",
-        "author": "Alexander Bock and Emil Axelsson and Jonathas Costa and G. Payne and M. Acinapura and V. Trakinski and Carter Emmart and Cl\u00e1udio Silva and C. Hansen and Anders Ynnerman",
+        "author": "Alexander Bock and Emil Axelsson and Jonathas Costa and Gene Payne and Micah Acinapura and Vivian Trakinski and Carter Emmart and Cl\u00e1udio Silva and Charles Hansen and Anders Ynnerman",
         "doi": "10.1109/TVCG.2019.2934259",
         "keywords": "data analysis task:data exploration, viz technique:2D/3D plots, viz technique:3D rendering, viz technique:interactive vis, astronomy topic:planetary, data source:observations, data source:simulations",
         "number": "1",
@@ -150,7 +150,7 @@
         "year": "2015"
     },
     "BorkiewiczNaimanLai2019": {
-        "author": "Borkiewicz, Kalina and Naiman, J. P. and Lai, Haoming",
+        "author": "Kalina Borkiewicz and J. P. Naiman and Haoming Lai",
         "bdsk-url-1": "http://dx.doi.org/10.3847/1538-3881/ab1f6f",
         "doi": "10.3847/1538-3881/ab1f6f",
         "issn": "1538-3881",
@@ -159,7 +159,7 @@
         "number": "1",
         "pages": "10",
         "publisher": "American Astronomical Society",
-        "serires": "The Astronomical Journal",
+        "series": "The Astronomical Journal",
         "title": "Cinematic Visualization of Multiresolution Data: Ytini for Adaptive Mesh Refinement in Houdini",
         "type": "article",
         "url": "http://dx.doi.org/10.3847/1538-3881/ab1f6f",
@@ -168,7 +168,7 @@
     },
     "BreddelsVeljanoski2018": {
         "abstract": "We present a new Python library, called vaex, intended to handle extremely large tabular datasets such as astronomical catalogues like the Gaia catalogue, N-body simulations, or other datasets which can be structured in rows and columns. Fast computations of statistics on regular N-dimensional grids allows analysis and visualization in the order of a billion rows per second, for a high-end desktop computer. We use streaming algorithms, memory mapped files, and a zero memory copy policy to allow exploration of datasets larger than memory, for example out-of-core algorithms. Vaex allows arbitrary (mathematical) transformations using normal Python expressions and (a subset of) numpy functions which are \u201clazily\u201d evaluated and computed when needed in small chunks, which avoids wasting of memory. Boolean expressions (which are also lazily evaluated) can be used to explore subsets of the data, which we call selections. Vaex uses a similar DataFrame API as Pandas, a very popular library, which helps migration from Pandas. Visualization is one of the key points of vaex, and is done using binned statistics in 1d (e.g. histogram), in 2d (e.g. 2d histograms with colourmapping) and 3d (using volume rendering). Vaex is split in in several packages: vaex-core for the computational part, vaex-viz for visualization mostly based on matplotlib, vaex-jupyter for visualization in the Jupyter notebook/lab based in IPyWidgets, vaex-server for the (optional) client-server communication, vaex-ui for the Qt based interface, vaex-hdf5 for HDF5 based memory mapped storage, vaex-astro for astronomy related selections, transformations, and memory mapped (column based) FITS storage.",
-        "author": "Breddels, Maarten A. and Veljanoski, Jovan",
+        "author": "Maarten A. Breddels and Jovan Veljanoski",
         "date-modified": "2020-07-02 22:30:25 -0600",
         "doi": "10.1051/0004-6361/201732493",
         "issn": "1432-0746",
@@ -184,7 +184,7 @@
     },
     "BurchettAbramovOtto2019": {
         "abstract": "Abstract We introduce IGM-Vis, a novel astrophysics visualization and data analysis application for investigating galaxies and the gas that surrounds them in context with their larger scale environment, the Cosmic Web. Environment is an important factor in the evolution of galaxies from actively forming stars to quiescent states with little, if any, discernible star formation activity. The gaseous halos of galaxies (the circumgalactic medium, or CGM) play a critical role in their evolution, because the gas necessary to fuel star formation and any gas expelled from widely observed galactic winds must encounter this interface region between galaxies and the intergalactic medium (IGM). We present a taxonomy of tasks typically employed in IGM/CGM studies informed by a survey of astrophysicists at various career levels, and demonstrate how these tasks are facilitated via the use of our visualization software. Finally, we evaluate the effectiveness of IGM-Vis through two in-depth use cases that depict real-world analysis sessions that use IGM/CGM data.",
-        "author": "Burchett, J.N. and Abramov, D. and Otto, J. and Artanegara, C. and Prochaska, J.X. and Forbes, A.G.",
+        "author": "Joseph N. Burchett and D. Abramov and J. Otto and C. Artanegara and J. Xavier Prochaska and Angus G. Forbes",
         "doi": "10.1111/cgf.13705",
         "keywords": "data analysis task:feature identification, viz technique:2D/3D plots, viz technique:3D rendering, viz technique:interactive vis, astronomy topic:extragalactic, data source:observations",
         "number": "3",
@@ -200,12 +200,13 @@
         "date-modified": "2020-12-08 10:53:39 -0700",
         "howpublished": "arXiv preprint arXiv:1307.4000",
         "keywords": "data analysis task:data exploration, viz technique:2D/3D plots, viz technique:interactive vis, astronomy topic:galactic, data source:observations",
+        "series": "Astronomy and Computing,",
         "title": "Filtergraph: An Interactive Web Application for Visualization of Astronomy Datasets",
         "type": "misc",
         "year": "2013"
     },
     "CiurloCampbellMorris2020": {
-        "author": "Ciurlo, Anna and Campbell, Randall D. and Morris, Mark R. and Do, Tuan and Ghez, Andrea M. and Hees, Aur{\\'e}lien and Sitarski, Breann N. and Kosmo O'Neil, Kelly and Chu, Devin S. and Martinez, Gregory D. and Naoz, Smadar and Stephan, Alexander P.",
+        "author": "Anna Ciurlo and Randall D. Campbell and Mark R. Morris and Tuan Do and Andrea M. Ghez and Aur{\\'e}lien Hees and Breann N. Sitarski and Kelly Kosmo O'Neil and Devin S. Chu and Gregory D. Martinez and Smadar Naoz and Alexander P. Stephan",
         "bdsk-url-1": "https://doi.org/10.1038/s41586-019-1883-y",
         "issn": "1476-4687",
         "keywords": "data analysis task:feature identification, viz technique:2D/3D plots, viz technique:3D rendering, astronomy topic:galactic, data source:observations",
@@ -235,7 +236,7 @@
         "year": "2020"
     },
     "CostaBockEmmart2021": {
-        "author": "J. {Costa} and A. {Bock} and C. {Emmart} and C. {Hansen} and A. {Ynnerman} and C. {Silva}",
+        "author": "Jonathas Costa and Alexander Bock and Carter Emmart and Charles Hansen and Anders Ynnerman and Cl\u00e1udio Silva",
         "bdsk-url-1": "https://doi.org/10.1109/TVCG.2020.3030333",
         "doi": "10.1109/TVCG.2020.3030333",
         "keywords": "data analysis task:data exploration, viz technique:2D/3D plots, viz technique:3D rendering, viz technique:interactive vis, astronomy topic:planetary, data source:observations, data source:simulations",
@@ -264,7 +265,7 @@
     },
     "DykesHassanGheller2018": {
         "abstract": "Virtual observatories (VOs) are online hubs of scientific knowledge. They encompass a collection of platforms dedicated to the storage and dissemination of astronomical data, from simple data archives to e-research platforms offering advanced tools for data exploration and analysis. Whilst the more mature platforms within VOs primarily serve the observational community, there are also services fulfilling a similar role for theoretical data. Scientific visualization can be an effective tool for analysis and exploration of data sets made accessible through web platforms for theoretical data, which often contain spatial dimensions and properties inherently suitable for visualization via e.g. mock imaging in 2D or volume rendering in 3D. We analyse the current state of 3D visualization for big theoretical astronomical data sets through scientific web portals and virtual observatory services. We discuss some of the challenges for interactive 3D visualization and how it can augment the workflow of users in a virtual observatory context. Finally we showcase a lightweight client\u2013server visualization tool for particle-based data sets, allowing quantitative visualization via data filtering, highlighting two example use cases within the Theoretical Astrophysical Observatory.",
-        "author": "Dykes, T and Hassan, A and Gheller, C and Croton, D and Krokos, M",
+        "author": "T. Dykes and A. Hassan and C. Gheller and D. Croton and M. Krokos",
         "doi": "10.1093/mnras/sty855",
         "issn": "0035-8711",
         "keywords": "data analysis task:data accessibility, viz technique:3D rendering, viz technique:interactive vis, viz technique:dimensionality reduction, astronomy topic:extragalactic, data source:simulations",
@@ -350,7 +351,7 @@
     },
     "KaehlerHahnAbel2012": {
         "abstract": "In the last decades cosmological N-body dark matter simulations have enabled ab initio studies of the formation of structure in the Universe. Gravity amplified small density fluctuations generated shortly after the Big Bang, leading to the formation of galaxies in the cosmic web. These calculations have led to a growing demand for methods to analyze time-dependent particle based simulations. Rendering methods for such N-body simulation data usually employ some kind of splatting approach via point based rendering primitives and approximate the spatial distributions of physical quantities using kernel interpolation techniques, common in SPH (Smoothed Particle Hydrodynamics)-codes. This paper proposes three GPU-assisted rendering approaches, based on a new, more accurate method to compute the physical densities of dark matter simulation data. It uses full phase-space information to generate a tetrahedral tessellation of the computational domain, with mesh vertices defined by the simulation's dark matter particle positions. Over time the mesh is deformed by gravitational forces, causing the tetrahedral cells to warp and overlap. The new methods are well suited to visualize the cosmic web. In particular they preserve caustics, regions of high density that emerge, when several streams of dark matter particles share the same location in space, indicating the formation of structures like sheets, filaments and halos. We demonstrate the superior image quality of the new approaches in a comparison with three standard rendering techniques for N-body simulation data.",
-        "author": "R. Kaehler and O. Hahn and T. Abel",
+        "author": "Ralf Kaehler and Oliver Hahn and Tom Abel",
         "doi": "10.1109/TVCG.2012.187",
         "keywords": "data analysis task:feature identification, viz technique:2D images, viz technique:dimensionality reduction, astronomy topic:extragalactic, data source:simulations",
         "number": "12",
@@ -406,12 +407,12 @@
         "year": "2019"
     },
     "KlashedHemingssonEmmart2010": {
-        "author": "Klashed, Staffan and Hemingsson, Per and Emmart, Carter and Cooper, Matthew and Ynnerman, Anders",
+        "author": "Staffan Klashed and Per Hemingsson and Carter Emmart and Matthew Cooper and Anders Ynnerman",
         "bdsk-url-1": "https://doi.org/10.2312/ega.20101005",
         "booktitle": "Eurographics - Areas Papers",
         "doi": "10.2312/ega.20101005",
         "keywords": "data analysis task:data wrangling, viz technique:3D rendering, astronomy topic:galactic, astronomy topic:planetary, data source:observations, data source:simulations",
-        "publisher": "Eurographics Association",
+        "series": "Eurographics Association",
         "title": "{Uniview - Visualizing the Universe}",
         "type": "inproceedings",
         "year": "2010"
@@ -432,7 +433,7 @@
     },
     "Madura2017": {
         "abstract": "Three-dimensional (3D) printing moves beyond interactive 3D graphics and provides an excellent tool for both visual and tactile learners, since 3D printing can now easily communicate complex geometries and full color information. Some limitations of interactive 3D graphics are also alleviated by 3D printable models, including issues of limited software support, portability, accessibility, and sustainability. We describe the motivations, methods, and results of our work on using 3D printing (1) to visualize and understand the \u03b7 Car Homunculus nebula and central binary system and (2) for astronomy outreach and education, specifically, with visually impaired students. One new result we present is the ability to 3D print full-color models of \u03b7 Car's colliding stellar winds. We also demonstrate how 3D printing has helped us communicate our improved understanding of the detailed structure of \u03b7 Car's Homunculus nebula and central binary colliding stellar winds, and their links to each other. Attached to this article are full-color 3D printable files of both a red-blue Homunculus model and the \u03b7 Car colliding stellar winds at orbital phase 1.045. 3D printing could prove to be vital to how astronomer's reach out and share their work with each other, the public, and new audiences.",
-        "author": "Madura, Thomas I.",
+        "author": "Thomas I. Madura",
         "doi": "10.1088/1538-3873/129/975/058011",
         "issn": "1538-3873",
         "keywords": "data analysis task:data accessibility, viz technique:interactive vis, viz technique:virtual reality, astronomy topic:galactic, data source:observations, data source:simulations",
@@ -462,11 +463,13 @@
     "MohammedPolysFarrah2020": {
         "author": "Ayat Mohammed and N. Polys and D. Farrah",
         "keywords": "data analysis task:data wrangling, viz technique:3D rendering, astronomy topic:extragalactic, data source:observations, data source:simulations",
+        "series": "Computer Science Technical Reports",
         "title": "Visualize This: Lessons from the Front-lines of High Performance Visualization",
         "type": "inproceedings",
         "year": "2020"
     },
     "Muna2017": {
+        "abstract": "Nightlight is a new desktop application designed to visualize astronomical data. A primary motivation for this program is to apply modern user interface design and advancements to the ubiquitous FITS file. In a more general sense, I wish to demonstrate the usefulness and desirability of employing modern, commercial frameworks for use with scientific code. A general description of the initial version of the program is presented here, as well as future development directions. Nightlight is available at http://nightlightapp.io.",
         "author": "Demitri Muna",
         "bdsk-url-1": "https://doi.org/10.1088/1538-3873/129/975/058003",
         "doi": "10.1088/1538-3873/129/975/058003",
@@ -475,7 +478,7 @@
         "number": "975",
         "pages": "058003",
         "publisher": "{IOP} Publishing",
-        "serires": "Publications of the Astronomical Society of the Pacific",
+        "series": "Publications of the Astronomical Society of the Pacific",
         "title": "Introducing Nightlight: A New {FITS} Viewer",
         "type": "article",
         "url": "https://doi.org/10.1088/1538-3873/129/975/058003",
@@ -484,7 +487,7 @@
     },
     "Naiman2016": {
         "abstract": "The rapid growth in scale and complexity of both computational and observational astrophysics over the past decade necessitates efficient and intuitive methods for examining and visualizing large datasets. Here, I present AstroBlend, an open-source Python library for use within the three dimensional modeling software, Blender. While Blender has been a popular open-source software among animators and visual effects artists, in recent years it has also become a tool for visualizing astrophysical datasets. AstroBlend combines the three dimensional capabilities of Blender with the analysis tools of the widely used astrophysical toolset, yt, to afford both computational and observational astrophysicists the ability to simultaneously analyze their data and create informative and appealing visualizations. The introduction of this package includes a description of features, work flow, and various example visualizations. A website --- www.astroblend.com --- has been developed which includes tutorials, and a gallery of example images and movies, along with links to downloadable data, three dimensional artistic models, and various other resources.",
-        "author": "J.P. Naiman",
+        "author": "J. P. Naiman",
         "bdsk-url-1": "http://www.sciencedirect.com/science/article/pii/S2213133716300117",
         "bdsk-url-2": "https://doi.org/10.1016/j.ascom.2016.02.002",
         "date-modified": "2020-12-14 11:03:17 -0700",
@@ -513,7 +516,7 @@
         "year": "2017"
     },
     "NtampakaZuHoneEisenstein2019": {
-        "author": "Ntampaka, M. and ZuHone, J. and Eisenstein, D. and Nagai, D. and Vikhlinin, A. and Hernquist, L. and Marinacci, F. and Nelson, D. and Pakmor, R. and Pillepich, A.",
+        "author": "M. Ntampaka and J. ZuHone and D. Eisenstein and D. Nagai and A. Vikhlinin and L. Hernquist and F. Marinacci and D .Nelson and R. Pakmor and A. Pillepich",
         "bdsk-url-1": "http://dx.doi.org/10.3847/1538-4357/ab14eb",
         "doi": "10.3847/1538-4357/ab14eb",
         "issn": "1538-4357",
@@ -546,7 +549,7 @@
     },
     "PomaredeCourtoisHoffman2017": {
         "abstract": "Cosmography, the study and making of maps of the universe or cosmos, is a field where visual representation benefits from modern three-dimensional visualization techniques and media. At the extragalactic distance scales, visualization is contributing to our understanding of the complex structure of the local universe in terms of spatial distribution and flows of galaxies and dark matter. In this paper, we report advances in the field of extragalactic cosmography obtained using the SDvision visualization software in the context of the Cosmicflows Project. Here, multiple visualization techniques are applied to a variety of data products: catalogs of galaxy positions and galaxy peculiar velocities, reconstructed velocity field, density field, gravitational potential field, velocity shear tensor viewed in terms of its eigenvalues and eigenvectors, envelope surfaces enclosing basins of attraction. These visualizations, implemented as high-resolution images, videos, and interactive viewers, have contributed to a number of studies: the cosmography of the local part of the universe, the nature of the Great Attractor, the discovery of the boundaries of our home supercluster of galaxies Laniakea, the mapping of the cosmic web, and the study of attractors and repellers.",
-        "author": "Pomar{\\`e}de, Daniel and Courtois, H{\\'e}l{\\`e}ne M. and Hoffman, Yehuda and Tully, R. Brent",
+        "author": "Daniel Pomar{\\`e}de and H{\\'e}l{\\`e}ne M. Courtois and Yehuda Hoffman and R. Brent Tully",
         "doi": "10.1088/1538-3873/aa5b73",
         "issn": "1538-3873",
         "keywords": "data analysis task:data exploration, viz technique:2D/3D plots, viz technique:3D rendering, viz technique:interactive vis, astronomy topic:extragalactic, data source:observations",
@@ -562,7 +565,7 @@
     },
     "PrestonGhodsXie2016": {
         "abstract": "Cosmological simulations produce a multitude of data types whose large scale makes them difficult to thoroughly explore in an interactive setting. One aspect of particular interest to scientists is the evolution of groups of dark matter particles, or \"halos,\" described by merger trees. However, in order to fully understand subtleties in the merger trees, other data types derived from the simulation must be incorporated as well. In this work, we develop a novel interactive linked-view visualization system that focuses on simultaneously exploring dark matter halos, their hierarchical evolution, corresponding particle data, and other quantitative information. We employ a parallel remote renderer and a local merger tree selection tool so that users can analyze large data sets interactively. This allows scientists to assess their simulation code, understand inconsistencies in extracted data, and intuitively understand simulation behavior on all scales. We demonstrate the effectiveness of our system through a set of case studies on large-scale cosmological data from the HACC (Hardware/Hybrid Accelerated Cosmology Code) simulation framework.",
-        "author": "A. Preston and R. Ghods and J. Xie and F. Sauer and N. Leaf and K. Ma and E. Rangel and E. Kovacs and K. Heitmann and S. Habib",
+        "author": "Annie Preston and Ramyar Ghods and Jinrong Xie and Franz Sauer and Nick Leaf and Kwan-Liu Ma and Estaban Rangel and Eve Kovacs and Katrin Heitmann and Salman Habib",
         "doi": "10.1109/PACIFICVIS.2016.7465250",
         "keywords": "data analysis task:feature identification, viz technique:2D/3D plots, viz technique:3D rendering, viz technique:interactive vis, astronomy topic:extragalactic, data source:simulations",
         "pages": "48-55",
@@ -572,7 +575,7 @@
         "year": "2016"
     },
     "RavouxArmengaudWalther2020": {
-        "author": "Ravoux, C. and Armengaud, E. and Walther, M. and Etourneau, T. and Pomar{\\`e}de, D. and Palanque-Delabrouille, N. and Y{\\`e}che, C. and Bautista, J. and Bourboux, H. du Mas des and Chabanier, S.",
+        "author": "C. Ravoux and E. Armengaud and M. Walther and T. Etourneau and Daniel Pomar{\\`e}de and N. Palanque-Delabrouille and C. Y{\\`e}che and J. Bautista and H. du Mas des Bourboux and S. Chabanier",
         "bdsk-url-1": "http://dx.doi.org/10.1088/1475-7516/2020/07/010",
         "doi": "10.1088/1475-7516/2020/07/010",
         "issn": "1475-7516",
@@ -618,12 +621,13 @@
         "year": "2019"
     },
     "Sawada_TimeTubes_2018": {
-        "author": "N. {Sawada} and M. {Nakayama} and M. {Uemura} and I. {Fujishiro}",
+        "abstract": "Blazars are attractive objects for astronomers to observe in order to demystify the relativistic jet. Astronomers need to classify characteristic temporal variation patterns and correlations of multidimensional time-dependent observed blazar datasets. Our visualization scheme, called TimeTubes, allows them to easily explore and analyze such datasets geometrically as a 3D volumetric tube. Even with TimeTubes, however, data analysis over such long-term datasets costs them so much labor and may cause a biased analysis. This paper, therefore, attempts to incorporate into the current prototype of TimeTubes, a new functionality: feature extraction, which supports astronomers' efficient data analysis by automatically extracting characteristic spatiotemporal subspaces.",
+        "author": "N. Sawada and M. Nakayama and M. Uemura and I. Fujishiro",
         "bdsk-url-1": "https://doi.org/10.1109/SciVis.2018.8823802",
-        "booktitle": "Proc. IEEE Scientific Visualization Conference (SciVis)",
         "doi": "10.1109/SciVis.2018.8823802",
         "keywords": "data analysis task:feature identification, viz technique:2D/3D plots, viz technique:interactive vis, astronomy topic:extragalactic, data source:observations",
         "pages": "67-71",
+        "series": "Proc. IEEE Scientific Visualization Conference (SciVis)",
         "title": "TimeTubes: Automatic Extraction of Observable Blazar Features from Long-Term, Multi-Dimensional Datasets",
         "type": "inproceedings",
         "year": "2018"
@@ -644,7 +648,7 @@
     },
     "ShanXieLi2014": {
         "abstract": "Halo is one of the most important basic elements in cosmology simulation, which merges from small clumps to ever larger objects. The processes of halos\u2019 birth and merging play a fundamental role in studying the evolution of large-scale cosmological structure. In this paper, a visual analysis system is developed to interactively identify and explore the evolution histories of thousands of halos. In this system, an intelligent structure-aware selection method in What You See Is What You Get manner is designed to efficiently define user\u2019s interesting region in 3D space with 2D hand-drawn lasso input. Then the exact information of halos within this 3D region is identified by data mining in the merger tree files. To avoid visual clutter, all the halos are projected in 2D space with MDS method. Through the linked view of 3D view and 2D graph, users can interactively explore these halos, including the tracing path and the evolution history tree.",
-        "author": "Shan, Guihua and Xie, Maojin and Li, Feng'An and Gao, Yang and Chi, Xuebin",
+        "author": "Guihua Shan and Maojin Xie and Feng'An Li and Yang Gao and Xuebin Chi",
         "doi": "10.1007/s12650-014-0206-5",
         "issn": "1875-8975",
         "keywords": "data analysis task:feature identification, viz technique:3D rendering, viz technique:interactive vis, viz technique:dimensionality reduction, astronomy topic:extragalactic, data source:simulations",
@@ -672,7 +676,7 @@
         "year": "2016"
     },
     "SkowronSkowronMroz2019": {
-        "author": "Skowron, Dorota M. and Skowron, Jan and Mr{\\'o}z, Przemek and Udalski, Andrzej and Pietrukowicz, Pawe{\\l} and Soszy{\\'n}ski, Igor and Szyma{\\'n}ski, Micha{\\l} K. and Poleski, Rados{\\l}aw and Koz{\\l}owski, Szymon and Ulaczyk, Krzysztof and Rybicki, Krzysztof and Iwanek, Patryk",
+        "author": "Dorota M. Skowron and Jan Skowron and Przemek Mr{\\'o}z and Andrzej Udalski and Pawe{\\l} Pietrukowicz and Igor Soszy{\\'n}ski and Micha{\\l} K. Szyma{\\'n}ski and Rados{\\l}aw Poleski and Szymon Koz{\\l}owski and Krzysztof Ulaczyk and Krzysztof Rybicki and Patryk Iwanek",
         "bdsk-url-1": "https://science.sciencemag.org/content/365/6452/478",
         "bdsk-url-2": "https://doi.org/10.1126/science.aau3181",
         "doi": "10.1126/science.aau3181",
@@ -690,7 +694,7 @@
         "year": "2019"
     },
     "Sousbie2011": {
-        "author": "Sousbie, T.",
+        "author": "T. Sousbie",
         "doi": "10.1111/j.1365-2966.2011.18394.x",
         "issn": "0035-8711",
         "keywords": "data analysis task:feature identification, viz technique:2D/3D plots, viz technique:2D images, viz technique:3D rendering, astronomy topic:extragalactic, data source:simulations, data source:observations",
@@ -723,7 +727,7 @@
     },
     "SteffenKoningWenger2011": {
         "abstract": "We present a flexible interactive 3D morpho-kinematical modeling application for astrophysics. Compared to other systems, our application reduces the restrictions on the physical assumptions, data type, and amount that is required for a reconstruction of an object's morphology. It is one of the first publicly available tools to apply interactive graphics to astrophysical modeling. The tool allows astrophysicists to provide a priori knowledge about the object by interactively defining 3D structural elements. By direct comparison of model prediction with observational data, model parameters can then be automatically optimized to fit the observation. The tool has already been successfully used in a number of astrophysical research projects.",
-        "author": "W. Steffen and N. Koning and S. Wenger and C. Morisset and M. Magnor",
+        "author": "Wolfgang Steffen and Nicholas Koning and Stephan Wenger and Christophe Morisset and Marcus Magnor",
         "doi": "10.1109/TVCG.2010.62",
         "keywords": "data analysis task:object reconstruction, viz technique:2D/3D plots, viz technique:3D rendering, viz technique:interactive vis, viz technique:dimensionality reduction, astronomy topic:galactic, data source:simulations, data source:observations",
         "number": "4",
@@ -750,11 +754,13 @@
         "year": "2005,"
     },
     "Taylor2014b": {
+        "abstract": "TOPCAT is a widely used desktop application for manipulation of astronomical catalogues and other tables, which has long provided fast interactive visualisation features including 1, 2 and 3-d plots, multiple datasets, linked views, color coding, transparency and more. In Version 4 a new plotting library has been written from scratch to deliver new and enhanced visualisation capabilities. This paper describes some of the considerations in the design and implementation, particularly in regard to providing comprehensible interactive visualisation for multi-million point datasets.",
         "archiveprefix": "arXiv",
         "author": "Mark Taylor",
         "eprint": "1410.6725",
         "keywords": "data analysis task:data exploration, viz technique:2D/3D plots, viz technique:2D images, viz technique:interactive vis, astronomy topic:extragalactic, astronomy topic:galactic, data source:simulations, data source:observations",
         "primaryclass": "astro-ph.IM",
+        "series": "Astronomical Data Anaylsis Software and Systems XXIII,",
         "title": "Visualising Large Datasets in TOPCAT v4",
         "type": "misc",
         "year": "2014"
@@ -818,7 +824,7 @@
     },
     "UsudaSatoTsuzukiYamaoka2018": {
         "abstract": "The National Astronomical Observatory of Japan has been working to increase public familiarity with astronomy. Here we introduce our outreach activities, including the development of interactive tools that make NAOJ data visible to the public.",
-        "author": "Usuda-Sato, Kumiko and Tsuzuki, Hiroko and Yamaoka, Hitoshi",
+        "author": "Kumiko Usuda-Sato and Hiroko Tsuzuki and Hitoshi Yamaoka",
         "bdsk-url-1": "https://doi.org/10.1038/s41550-018-0567-0",
         "issn": "2397-3366",
         "keywords": "data analysis task:data accessibility, viz technique:3D rendering, viz technique:interactive vis, astronomy topic:extragalactic, astronomy topic:galactic, data source:observations",
@@ -908,14 +914,14 @@
         "doi": "10.1007/s10509-011-0801-z",
         "keywords": "data analysis task:data wrangling, viz technique:virtual reality, astronomy topic:extragalactic, astronomy topic:galactic, data source:observations, data source:simulations",
         "month": "07",
-        "series": "Astrophysics and Space Science - ASTROPHYS SPACE SCI",
+        "series": "Astrophysics and Space Science",
         "title": "Stereo pairs in Astrophysics",
         "type": "article",
         "volume": "337",
         "year": "2011"
     },
     "VohlBarnesFluke2016": {
-        "author": "Vohl, D. and David G. Barnes and Christopher J. Fluke and Poudel, G. and Georgiou-Karistianis, N. and Hassan, A. H. and Benovitski, Y. and Wong, T. H. and Kaluza, O. L. and Nguyen, T. D. and Bonnington, C. P.",
+        "author": "D. Vohl and David G. Barnes and Christopher J. Fluke and G. Poudel and N. Georgiou-Karistianis and A. Hassan and Y. Benovitski and T. H. Wong and O. L. Kaluza and T. D. Nguyen and C. P. Bonnington",
         "bdsk-url-1": "https://doi.org/10.7717/peerj-cs.88",
         "doi": "https://doi.org/10.7717/peerj-cs.88",
         "keywords": "data analysis task:data exploration, viz technique:2D/3D plots, viz technique:3D rendering, viz technique:interactive vis, astronomy topic:extragalactic, data source:observations",
@@ -940,7 +946,7 @@
     },
     "WengerLorenzMagnor2013": {
         "abstract": "Abstract Astronomical nebulae are among the most complex and visually appealing phenomena known outside the bounds of the Solar System. However, our fixed vantage point on Earth limits us to a single known view of these objects, and their intricate volumetric structure cannot be recovered directly. Recent approaches to reconstructing a volumetric 3D model use the approximate symmetry inherent to many nebulae, but require several hours of computation time on large multi-GPU clusters. We present a novel reconstruction algorithm based on group sparsity that reaches or even exceeds the quality of prior results while taking only a fraction of the time on a conventional desktop PC, thereby enabling end users in planetariums or educational facilities to produce high-quality content without expensive hardware or manual modeling. In principle, our approach can be generalized to other transparent phenomena with arbitrary types of user-specified symmetries.",
-        "author": "Wenger, Stephan and Lorenz, Dirk and Magnor, Marcus",
+        "author": "Stephan Wenger and Dirk Lorenz and Marcus Magnor",
         "bdsk-url-1": "https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.12216",
         "bdsk-url-2": "https://doi.org/10.1111/cgf.12216",
         "date-modified": "2020-12-14 11:04:05 -0700",

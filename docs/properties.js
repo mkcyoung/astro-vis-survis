@@ -52,10 +52,11 @@ var editable = true;
 /**
  * Subtitle describing the paper the data is referring to (set to null to deactivate)
  * @type {{html: string, id: string}}
+ * EDIT THIS WHEN SURVEY IS PUBLISHED ONLINE
  */
 var paper = {
-    html: 'Literature collection for <b><a href="http://www.visus.uni-stuttgart.de/uploads/tx_vispublications/eurovis14-star.pdf" target="_blank">Visualization in Astrophysics</a></b>',
-    id: 'Beck2016Visual'
+    html: 'Literature collection for <b><a href="#" target="_blank">Visualization in Astrophysics</a></b>',
+    id: ''
 };
 
 /**
