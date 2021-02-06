@@ -576,7 +576,7 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
         }
 
         //legend
-        console.log("here")
+        // console.log("here")
         let legend = chart.selectAll(".legend")
             .data(color.domain())
             .enter().append("g")

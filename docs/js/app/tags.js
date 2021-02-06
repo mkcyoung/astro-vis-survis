@@ -199,6 +199,7 @@ define(['jquery', 'app/util', 'app/selectors', 'app/bib'], function ($, util, se
 
     function initTagCloudDiv(options) {
         var id = 'tag_cloud_' + options.field;
+        console.log(options.field)
         var tagCloudDiv = $(id);
         if (tagCloudDiv.length == 0) {
             tagCloudDiv = $('<div>', {
@@ -252,7 +253,13 @@ define(['jquery', 'app/util', 'app/selectors', 'app/bib'], function ($, util, se
             return false;
         });
 
-        var h2Div = $('<h2><span class="symbol">/</span>' + options.title + '</h2>').appendTo(tagCloudDiv);
+        var h2Div = null
+        if (options.title == 'Series'){
+            h2Div = $('<h2><span class="symbol">/</span>' + "Venues" + '</h2>').appendTo(tagCloudDiv);
+        }
+        else{
+            h2Div = $('<h2><span class="symbol">/</span>' + options.title + '</h2>').appendTo(tagCloudDiv);
+        }
         h2Div.click(function () {
             util.toggleControl(h2Div);
         });
