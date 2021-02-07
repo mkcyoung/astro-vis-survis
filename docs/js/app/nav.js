@@ -584,16 +584,16 @@ define(['jquery', 'd3', 'jquery.tooltipster', 'app/bib', 'app/selectors'], funct
             .attr("transform", function(d, i) { return "translate(" + i*100 + ","+ (height-5) + ")"; });
 
         legend.append("rect")
-            .attr("x", width/4)
+            .attr("x", width/5)
             // .attr("x", width - 18)
-            .attr("width", 18)
-            .attr("height", 18)
+            .attr("width", 15)
+            .attr("height", 15)
             .style("fill", color);
 
         legend.append("text")
-            .attr("x", width/4 - 5)
+            .attr("x", width/5 - 5)
             // .attr("x", width - 24)
-            .attr("y", 9)
+            .attr("y", 7.5)
             .attr("dy", ".35em")
             .style("text-anchor", "end")
             .text(function(d) { return d; });

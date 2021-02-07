@@ -268,14 +268,14 @@
         "volume": "477",
         "year": "2018"
     },
-    "Elek_Polyphorm_TVCG2021": {
+    "ElekBurchettProchaska2021": {
         "//pages": "184--194",
         "author": "Oskar Elek and Joseph N. Burchett and J. Xavier Prochaska and Angus G. Forbes",
         "doi": "https://doi.org/10.1109/TVCG.2020.3030407",
         "keywords": "data analysis task:object reconstruction, viz technique:3D rendering, viz technique:interactive vis, astronomy topic:extragalactic, data source:observations, data source:simulations",
         "month": "February",
         "number": "2",
-        "series": "{IEEE Transactions on Visualization and Computer Graphics}",
+        "series": "IEEE Transactions on Visualization and Computer Graphics",
         "title": "Polyphorm: {S}tructural Analysis of Cosmological Datasets via Interactive {P}hysarum {P}olycephalum Visualization",
         "type": "article",
         "volume": "27",
@@ -881,7 +881,7 @@
         "volume": "2",
         "year": "2018"
     },
-    "Verbraeck_SciVis2020": {
+    "VerbraeckEisemann2021": {
         "author": "A. Verbraeck and E. Eisemann",
         "bdsk-url-1": "https://doi.org/10.1109/TVCG.2020.3030452",
         "doi": "10.1109/TVCG.2020.3030452",
